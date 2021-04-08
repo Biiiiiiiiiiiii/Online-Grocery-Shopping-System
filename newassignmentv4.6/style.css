@@ -42,3 +42,110 @@ body {
 .mt-55 {
     margin-top: calc(50px + (60 - 50) * ((100vw - 360px) / (1600 - 360))) !important
 }
+
+.wrapper {
+    padding: 30px;
+    max-width: 1200px;
+    margin: auto
+}
+
+#sidebar {
+  width: 25%;
+  float: left
+}
+
+.category {
+  font-size: 0.9rem;
+  cursor: pointer
+}
+
+.btn-primary {
+    color: #fff;
+    background-color: #541191;
+    border-color:  #541191;
+  }
+  
+  .btn-primary:hover {
+    color: #fff;
+    background-color: #541191;
+    border-color:  #541191;
+  }
+  
+  .btn-primary:focus, .btn-primary.focus {
+    color: #fff;
+    background-color: #0069d9;
+    border-color: #0062cc;
+    box-shadow: 0 0 0 0.2rem rgba(38, 143, 255, 0.5);
+  }
+  
+  .btn-primary.disabled, .btn-primary:disabled {
+    color: #fff;
+    background-color:  #541191;
+    border-color:  #541191;
+  }
+  
+  .btn-primary:not(:disabled):not(.disabled):active, .btn-primary:not(:disabled):not(.disabled).active,
+  .show > .btn-primary.dropdown-toggle {
+    color: #fff;
+    background-color: #541191;
+    border-color:  #541191;
+  }
+  .btn-outline-primary {
+    color:#541191;
+    border-color: #541191;
+  }
+  
+  .btn-outline-primary:hover {
+    color: #fff;
+    background-color:#541191;
+    border-color: #541191;
+  }
+  
+  .btn-outline-primary:focus, .btn-outline-primary.focus {
+    box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.5);
+  }
+  
+  .btn-outline-primary.disabled, .btn-outline-primary:disabled {
+    color: #541191;
+    background-color: transparent;
+  }
+  
+  .btn-outline-primary:not(:disabled):not(.disabled):active, .btn-outline-primary:not(:disabled):not(.disabled).active,
+  .show > .btn-outline-primary.dropdown-toggle {
+    color: #fff;
+    background-color: #541191;
+    border-color: #541191;
+  }
+  .badge {
+    transition: none;
+  }
+
+
+a.badge:hover, a.badge:focus {
+  text-decoration: none;
+}
+
+.badge:empty {
+  display: none;
+}
+
+.btn .badge {
+  position: relative;
+  top: -1px;
+}
+
+.badge-pill {
+  padding-right: 0.6em;
+  padding-left: 0.6em;
+  border-radius: 10rem;
+}
+
+.badge-primary {
+  color: #fff;
+  background-color: #541191;
+}
+
+a.badge-primary:hover, a.badge-primary:focus {
+  color: #fff;
+  background-color: #541191;
+}
