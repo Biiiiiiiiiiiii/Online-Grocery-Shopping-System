@@ -1,5 +1,5 @@
 // ignore the search
-function search(){
+/*function search(){
     var input,filter, h5, arr, i, value;
     input=document.getElementByClassName('card');
     filter = input.value.toUpperCase();
@@ -13,7 +13,7 @@ function search(){
         }
     }
 }
-
+*/
 
     $('.quantity-right-plus').click(function(e){
         e.preventDefault();
