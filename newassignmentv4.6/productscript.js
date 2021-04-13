@@ -1,19 +1,14 @@
-// ignore the search
-/*function search(){
-    var input,filter, h5, arr, i, value;
-    input=document.getElementByClassName('card');
-    filter = input.value.toUpperCase();
-    h5 = document.getElementsByTagName('h5');
-
-    for(i=0;i<h5.length;i++){
-        arr = h5[i].getElementsByClassName("font-weight-bold pt-1")[0];
-        value = arr.textContent;
-        if(value.toUpperCase().indexOf(filter)>-1){
-            h5[i].style.display = "";
+$(".filter").on("keyup",function(){
+    var input = $(this).val().toUpperCase();
+    $(".card").each(function(){
+        if($(this).data("string").toUpperCase().indexOf(input)<0){
+            $(this).hide();
+        } else{
+            $(this).show();
         }
-    }
-}
-*/
+    })
+});
+
 
     $('.quantity-right-plus').click(function(e){
         e.preventDefault();
