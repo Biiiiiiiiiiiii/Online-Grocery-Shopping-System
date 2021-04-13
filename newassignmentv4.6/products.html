@@ -15,7 +15,7 @@
                     <div class="p-2 bd-highlight">
     
                         <form class="form col-12 col-lg-auto mb-3 mb-lg-0 ">
-                            <input type="search " class="form-control " placeholder="Search... "></form>
+                            <input class="filter" type="search" name = "search" placeholder="Search... " ></form>
                                       
                     </div>
                     <div class="ml-auto p-2 bd-highlight">
@@ -46,15 +46,16 @@
                                     </div>
                                 </li>
                                 <li class="nav-item ">
-                                    <a class="nav-link " style="color: #541191; " href="# ">My Shopping List</a>
+                                    <a class="nav-link " style="color: #541191; " href="shoppinglist.html">My Shopping List</a>
                                 </li>
                                 <li class="nav-item ">
                                     <a class="nav-link " style="color: #541191; " href="# ">History</a>
                                 </li>
                             </ul>
                             <ul class="nav ">
-                                <li class="nav-item "><a href="# " class="nav-link px-2 " style="color: #541191; ">Login</a></li>
-                                <li class="nav-item "><a href="# " class="nav-link px-2 " style="color: #541191; ">Sign up</a></li>
+                                <li class="nav-item "><a href="index.html" class="nav-link px-2 " style="color: #541191; ">Logout</a></li>
+                                <li class="nav-item "><a href="userprofile.html" class="nav-link px-2 " style="color: #541191; ">
+                                  <img src="https://bootdey.com/img/Content/avatar/avatar7.png" alt="User" class="rounded-circle" width="30"></a></li>
                             </ul>
     
                         </div>
@@ -74,16 +75,69 @@
             </section>
             <!--Products section-->
             <section id="products">
-                <div class="container py-3">
-                    <div class="row">
-                        <div class="col-lg-4 col-md-6 col-sm-10 offset-md-0 offset-sm-1 pt-lg-4 pt-4">
-                            <div class="card"> <img class="card-img-top" src="products/drinks/coffee.png" style="padding: 20px;height: 250 ;width: 250;">
-                                <div class="card-body">
-                                    <h5 class="font-weight-bold pt-1">Coffee</h5>
-                                    <div class="text-muted description">Nescafe white coffee</div>
-                                        <div class="h6 font-weight-bold">RM 8.99</div>
-                                        <div class="input-group">
-                                            
+                <div class="card-group">
+                    <div class="container py-3">
+                        <div class="row">
+                            <div class="card col-lg-4 col-md-6 col-sm-10 offset-md-0 offset-sm-1 pt-lg-4 pt-4" data-string="Coffee">
+                                <div class="card"> <img class="card-img-top" src="products/drinks/coffee.png" style="padding: 20px;height: 250 ;width: 250;">
+                                    <div class="card-body">
+                                        <h5 class="font-weight-bold pt-1">Coffee</h5>
+                                        <div class="text-muted description">Nescafe white coffee</div>
+                                            <div class="h6 font-weight-bold">RM 8.99</div>
+                                            <div class="input-group">
+                                                
+                                                    <button class="quantity-left-minus btn btn-outline-secondary" type="button" width="16" height="16">-</button>
+                                                
+                                                <div class = "quantity-input">
+                                                    <input type="text" id="quantity" name="quantity" class="form-control" value ="1" min="1" max="100" style="max-width:50px">
+                                                </div>
+                                                
+                                                  <button class="quantity-right-plus btn btn-outline-secondary" type="button" width="16" height="16">+</button>
+                                                
+                                                <button class="btn btn-primary" id = "add2list" style = "margin-left: 10px;" onclick="openModal()">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-bag-plus-fill" viewBox="0 0 16 16">
+                                                        <path fill-rule="evenodd" d="M10.5 3.5a2.5 2.5 0 0 0-5 0V4h5v-.5zm1 0V4H15v10a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V4h3.5v-.5a3.5 3.5 0 1 1 7 0zM8.5 8a.5.5 0 0 0-1 0v1.5H6a.5.5 0 0 0 0 1h1.5V12a.5.5 0 0 0 1 0v-1.5H10a.5.5 0 0 0 0-1H8.5V8z"/>
+                                                      </svg>
+                                                </button>
+                                                
+                                            </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card col-lg-4 col-md-6 col-sm-10 offset-md-0 offset-sm-1 pt-lg-4 pt-4" data-string="Milk">
+                                <div class="card"> <img class="card-img-top" src="products/drinks/milk.png" style="padding: 20px;height: 250 ;width: 250;">
+                                    <div class="card-body">
+                                        <h5 class="font-weight-bold pt-1">Milk</h5>
+                                        <div class="text-muted description">Fernleaf full cream milk</div>
+                                            <div class="h6 font-weight-bold">RM 6.49</div>
+                                            <div class="input-group">
+                                                
+                                                    <button class="quantity-left-minus btn btn-outline-secondary" type="button" width="16" height="16">-</button>
+                                                
+                                                <div class = "quantity-input">
+                                                    <input type="text" id="quantity" name="quantity" class="form-control" value ="1" min="1" max="100" style="max-width:50px">
+                                                </div>
+                                                
+                                                  <button class="quantity-right-plus btn btn-outline-secondary" type="button" width="16" height="16">+</button>
+                                                
+                                                <button class="btn btn-primary" id = "add2list" style = "margin-left: 10px;" onclick="openModal()">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-bag-plus-fill" viewBox="0 0 16 16">
+                                                        <path fill-rule="evenodd" d="M10.5 3.5a2.5 2.5 0 0 0-5 0V4h5v-.5zm1 0V4H15v10a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V4h3.5v-.5a3.5 3.5 0 1 1 7 0zM8.5 8a.5.5 0 0 0-1 0v1.5H6a.5.5 0 0 0 0 1h1.5V12a.5.5 0 0 0 1 0v-1.5H10a.5.5 0 0 0 0-1H8.5V8z"/>
+                                                      </svg>
+                                                </button>
+                                                
+                                            </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card col-lg-4 col-md-6 col-sm-10 offset-md-0 offset-sm-1 pt-lg-4 pt-4" data-string="Carbonated drink">
+                                <div class="card"> <img class="card-img-top" src="products/drinks/pepsi.png" style="padding: 20px;height: 250 ;width: 250;">
+                                    <div class="card-body">
+                                        <h5 class="font-weight-bold pt-1">Carbonated drink</h5>
+                                        <div class="text-muted description">200ml Pepsi tin</div>
+                                            <div class="h6 font-weight-bold">RM 2.00</div>
+                                            <div class="input-group">
+                                                
                                                 <button class="quantity-left-minus btn btn-outline-secondary" type="button" width="16" height="16">-</button>
                                             
                                             <div class = "quantity-input">
@@ -99,193 +153,143 @@
                                             </button>
                                             
                                         </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-4 col-md-6 col-sm-10 offset-md-0 offset-sm-1 pt-lg-4 pt-4">
-                            <div class="card"> <img class="card-img-top" src="products/drinks/milk.png" style="padding: 20px;height: 250 ;width: 250;">
-                                <div class="card-body">
-                                    <h5 class="font-weight-bold pt-1">Milk</h5>
-                                    <div class="text-muted description">Fernleaf full cream milk</div>
-                                        <div class="h6 font-weight-bold">RM 6.49</div>
-                                        <div class="input-group">
-                                            
-                                            <button class="quantity-left-minus btn btn-outline-secondary" type="button" width="16" height="16">-</button>
-                                        
-                                        <div class = "quantity-input">
-                                            <input type="text" id="quantity" name="quantity" class="form-control" value ="1" min="1" max="100" style="max-width:50px">
-                                        </div>
-                                        
-                                          <button class="quantity-right-plus btn btn-outline-secondary" type="button" width="16" height="16">+</button>
-                                        
-                                        <button class="btn btn-primary" id = "add2list" style = "margin-left: 10px;" onclick="openModal()">
-                                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-bag-plus-fill" viewBox="0 0 16 16">
-                                                <path fill-rule="evenodd" d="M10.5 3.5a2.5 2.5 0 0 0-5 0V4h5v-.5zm1 0V4H15v10a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V4h3.5v-.5a3.5 3.5 0 1 1 7 0zM8.5 8a.5.5 0 0 0-1 0v1.5H6a.5.5 0 0 0 0 1h1.5V12a.5.5 0 0 0 1 0v-1.5H10a.5.5 0 0 0 0-1H8.5V8z"/>
-                                              </svg>
-                                        </button>
-                                        
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="col-lg-4 col-md-6 col-sm-10 offset-md-0 offset-sm-1 pt-lg-4 pt-4">
-                            <div class="card"> <img class="card-img-top" src="products/drinks/pepsi.png" style="padding: 20px;height: 250 ;width: 250;">
-                                <div class="card-body">
-                                    <h5 class="font-weight-bold pt-1">Carbonated drink</h5>
-                                    <div class="text-muted description">200ml Pepsi tin</div>
-                                        <div class="h6 font-weight-bold">RM 2.00</div>
-                                        <div class="input-group">
+                            <div class="card col-lg-4 col-md-6 col-sm-10 offset-md-0 offset-sm-1 pt-lg-4 pt-4" data-string="Tea">
+                                <div class="card"> <img class="card-img-top" src="products/drinks/tea.png" style="padding: 20px;height: 250 ;width: 250;">
+                                    <div class="card-body">
+                                        <h5 class="font-weight-bold pt-1">Tea</h5>
+                                        <div class="text-muted description">Boh green tea</div>
+                                            <div class="h6 font-weight-bold">RM 5.50</div>
+                                            <div class="input-group">
+                                                
+                                                <button class="quantity-left-minus btn btn-outline-secondary" type="button" width="16" height="16">-</button>
                                             
-                                            <button class="quantity-left-minus btn btn-outline-secondary" type="button" width="16" height="16">-</button>
-                                        
-                                        <div class = "quantity-input">
-                                            <input type="text" id="quantity" name="quantity" class="form-control" value ="1" min="1" max="100" style="max-width:50px">
+                                            <div class = "quantity-input">
+                                                <input type="text" id="quantity" name="quantity" class="form-control" value ="1" min="1" max="100" style="max-width:50px">
+                                            </div>
+                                            
+                                              <button class="quantity-right-plus btn btn-outline-secondary" type="button" width="16" height="16">+</button>
+                                            
+                                            <button class="btn btn-primary" id = "add2list" style = "margin-left: 10px;" onclick="openModal()">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-bag-plus-fill" viewBox="0 0 16 16">
+                                                    <path fill-rule="evenodd" d="M10.5 3.5a2.5 2.5 0 0 0-5 0V4h5v-.5zm1 0V4H15v10a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V4h3.5v-.5a3.5 3.5 0 1 1 7 0zM8.5 8a.5.5 0 0 0-1 0v1.5H6a.5.5 0 0 0 0 1h1.5V12a.5.5 0 0 0 1 0v-1.5H10a.5.5 0 0 0 0-1H8.5V8z"/>
+                                                  </svg>
+                                            </button>
+                                            
                                         </div>
-                                        
-                                          <button class="quantity-right-plus btn btn-outline-secondary" type="button" width="16" height="16">+</button>
-                                        
-                                        <button class="btn btn-primary" id = "add2list" style = "margin-left: 10px;" onclick="openModal()">
-                                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-bag-plus-fill" viewBox="0 0 16 16">
-                                                <path fill-rule="evenodd" d="M10.5 3.5a2.5 2.5 0 0 0-5 0V4h5v-.5zm1 0V4H15v10a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V4h3.5v-.5a3.5 3.5 0 1 1 7 0zM8.5 8a.5.5 0 0 0-1 0v1.5H6a.5.5 0 0 0 0 1h1.5V12a.5.5 0 0 0 1 0v-1.5H10a.5.5 0 0 0 0-1H8.5V8z"/>
-                                              </svg>
-                                        </button>
-                                        
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="col-lg-4 col-md-6 col-sm-10 offset-md-0 offset-sm-1 pt-lg-4 pt-4">
-                            <div class="card"> <img class="card-img-top" src="products/drinks/tea.png" style="padding: 20px;height: 250 ;width: 250;">
-                                <div class="card-body">
-                                    <h5 class="font-weight-bold pt-1">Tea</h5>
-                                    <div class="text-muted description">Boh green tea</div>
-                                        <div class="h6 font-weight-bold">RM 5.50</div>
-                                        <div class="input-group">
+                            <div class="col-lg-4 col-md-6 col-sm-10 offset-md-0 offset-sm-1 pt-lg-4 pt-4">
+                                <div class="card"> <img class="card-img-top" src="products/frozen/butter.png" style="padding: 20px;height: 250 ;width: 250;">
+                                    <div class="card-body">
+                                        <h5 class="font-weight-bold pt-1">Butter</h5>
+                                        <div class="text-muted description">Butter cube</div>
+                                            <div class="h6 font-weight-bold">RM 18.90</div>
+                                            <div class="input-group">
+                                                
+                                                <button class="quantity-left-minus btn btn-outline-secondary" type="button" width="16" height="16">-</button>
                                             
-                                            <button class="quantity-left-minus btn btn-outline-secondary" type="button" width="16" height="16">-</button>
-                                        
-                                        <div class = "quantity-input">
-                                            <input type="text" id="quantity" name="quantity" class="form-control" value ="1" min="1" max="100" style="max-width:50px">
+                                            <div class = "quantity-input">
+                                                <input type="text" id="quantity" name="quantity" class="form-control" value ="1" min="1" max="100" style="max-width:50px">
+                                            </div>
+                                            
+                                              <button class="quantity-right-plus btn btn-outline-secondary" type="button" width="16" height="16">+</button>
+                                            
+                                            <button class="btn btn-primary" id = "add2list" style = "margin-left: 10px;" onclick="openModal()">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-bag-plus-fill" viewBox="0 0 16 16">
+                                                    <path fill-rule="evenodd" d="M10.5 3.5a2.5 2.5 0 0 0-5 0V4h5v-.5zm1 0V4H15v10a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V4h3.5v-.5a3.5 3.5 0 1 1 7 0zM8.5 8a.5.5 0 0 0-1 0v1.5H6a.5.5 0 0 0 0 1h1.5V12a.5.5 0 0 0 1 0v-1.5H10a.5.5 0 0 0 0-1H8.5V8z"/>
+                                                  </svg>
+                                            </button>
+                                            
                                         </div>
-                                        
-                                          <button class="quantity-right-plus btn btn-outline-secondary" type="button" width="16" height="16">+</button>
-                                        
-                                        <button class="btn btn-primary" id = "add2list" style = "margin-left: 10px;" onclick="openModal()">
-                                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-bag-plus-fill" viewBox="0 0 16 16">
-                                                <path fill-rule="evenodd" d="M10.5 3.5a2.5 2.5 0 0 0-5 0V4h5v-.5zm1 0V4H15v10a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V4h3.5v-.5a3.5 3.5 0 1 1 7 0zM8.5 8a.5.5 0 0 0-1 0v1.5H6a.5.5 0 0 0 0 1h1.5V12a.5.5 0 0 0 1 0v-1.5H10a.5.5 0 0 0 0-1H8.5V8z"/>
-                                              </svg>
-                                        </button>
-                                        
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="col-lg-4 col-md-6 col-sm-10 offset-md-0 offset-sm-1 pt-lg-4 pt-4">
-                            <div class="card"> <img class="card-img-top" src="products/frozen/butter.png" style="padding: 20px;height: 250 ;width: 250;">
-                                <div class="card-body">
-                                    <h5 class="font-weight-bold pt-1">Butter</h5>
-                                    <div class="text-muted description">Butter cube</div>
-                                        <div class="h6 font-weight-bold">RM 18.90</div>
-                                        <div class="input-group">
+                            <div class="col-lg-4 col-md-6 col-sm-10 offset-md-0 offset-sm-1 pt-lg-4 pt-4">
+                                <div class="card"> <img class="card-img-top" src="products/frozen/ice cream.png" style="padding: 20px;height: 250 ;width: 250;">
+                                    <div class="card-body">
+                                        <h5 class="font-weight-bold pt-1">Ice cream</h5>
+                                        <div class="text-muted description">Magnum white chocolate</div>
+                                            <div class="h6 font-weight-bold">RM 15.60</div>
+                                            <div class="input-group">
+                                                
+                                                <button class="quantity-left-minus btn btn-outline-secondary" type="button" width="16" height="16">-</button>
                                             
-                                            <button class="quantity-left-minus btn btn-outline-secondary" type="button" width="16" height="16">-</button>
-                                        
-                                        <div class = "quantity-input">
-                                            <input type="text" id="quantity" name="quantity" class="form-control" value ="1" min="1" max="100" style="max-width:50px">
+                                            <div class = "quantity-input">
+                                                <input type="text" id="quantity" name="quantity" class="form-control" value ="1" min="1" max="100" style="max-width:50px">
+                                            </div>
+                                            
+                                              <button class="quantity-right-plus btn btn-outline-secondary" type="button" width="16" height="16">+</button>
+                                            
+                                            <button class="btn btn-primary" id = "add2list" style = "margin-left: 10px;" onclick="openModal()">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-bag-plus-fill" viewBox="0 0 16 16">
+                                                    <path fill-rule="evenodd" d="M10.5 3.5a2.5 2.5 0 0 0-5 0V4h5v-.5zm1 0V4H15v10a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V4h3.5v-.5a3.5 3.5 0 1 1 7 0zM8.5 8a.5.5 0 0 0-1 0v1.5H6a.5.5 0 0 0 0 1h1.5V12a.5.5 0 0 0 1 0v-1.5H10a.5.5 0 0 0 0-1H8.5V8z"/>
+                                                  </svg>
+                                            </button>
+                                            
                                         </div>
-                                        
-                                          <button class="quantity-right-plus btn btn-outline-secondary" type="button" width="16" height="16">+</button>
-                                        
-                                        <button class="btn btn-primary" id = "add2list" style = "margin-left: 10px;" onclick="openModal()">
-                                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-bag-plus-fill" viewBox="0 0 16 16">
-                                                <path fill-rule="evenodd" d="M10.5 3.5a2.5 2.5 0 0 0-5 0V4h5v-.5zm1 0V4H15v10a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V4h3.5v-.5a3.5 3.5 0 1 1 7 0zM8.5 8a.5.5 0 0 0-1 0v1.5H6a.5.5 0 0 0 0 1h1.5V12a.5.5 0 0 0 1 0v-1.5H10a.5.5 0 0 0 0-1H8.5V8z"/>
-                                              </svg>
-                                        </button>
-                                        
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="col-lg-4 col-md-6 col-sm-10 offset-md-0 offset-sm-1 pt-lg-4 pt-4">
-                            <div class="card"> <img class="card-img-top" src="products/frozen/ice cream.png" style="padding: 20px;height: 250 ;width: 250;">
-                                <div class="card-body">
-                                    <h5 class="font-weight-bold pt-1">Ice cream</h5>
-                                    <div class="text-muted description">Magnum white chocolate</div>
-                                        <div class="h6 font-weight-bold">RM 15.60</div>
-                                        <div class="input-group">
+                            <div class="col-lg-4 col-md-6 col-sm-10 offset-md-0 offset-sm-1 pt-lg-4 pt-4">
+                                <div class="card"> <img class="card-img-top" src="products/frozen/meatballs.png" style="padding: 20px;height: 250 ;width: 250;">
+                                    <div class="card-body">
+                                        <h5 class="font-weight-bold pt-1">Meatballs</h5>
+                                        <div class="text-muted description">Uni beef meatballs</div>
+                                            <div class="h6 font-weight-bold">RM 7.99</div>
+                                            <div class="input-group">
+                                                
+                                                <button class="quantity-left-minus btn btn-outline-secondary" type="button" width="16" height="16">-</button>
                                             
-                                            <button class="quantity-left-minus btn btn-outline-secondary" type="button" width="16" height="16">-</button>
-                                        
-                                        <div class = "quantity-input">
-                                            <input type="text" id="quantity" name="quantity" class="form-control" value ="1" min="1" max="100" style="max-width:50px">
+                                            <div class = "quantity-input">
+                                                <input type="text" id="quantity" name="quantity" class="form-control" value ="1" min="1" max="100" style="max-width:50px">
+                                            </div>
+                                            
+                                              <button class="quantity-right-plus btn btn-outline-secondary" type="button" width="16" height="16">+</button>
+                                            
+                                            <button class="btn btn-primary" id = "add2list" style = "margin-left: 10px;" onclick="openModal()">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-bag-plus-fill" viewBox="0 0 16 16">
+                                                    <path fill-rule="evenodd" d="M10.5 3.5a2.5 2.5 0 0 0-5 0V4h5v-.5zm1 0V4H15v10a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V4h3.5v-.5a3.5 3.5 0 1 1 7 0zM8.5 8a.5.5 0 0 0-1 0v1.5H6a.5.5 0 0 0 0 1h1.5V12a.5.5 0 0 0 1 0v-1.5H10a.5.5 0 0 0 0-1H8.5V8z"/>
+                                                  </svg>
+                                            </button>
+                                            
                                         </div>
-                                        
-                                          <button class="quantity-right-plus btn btn-outline-secondary" type="button" width="16" height="16">+</button>
-                                        
-                                        <button class="btn btn-primary" id = "add2list" style = "margin-left: 10px;" onclick="openModal()">
-                                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-bag-plus-fill" viewBox="0 0 16 16">
-                                                <path fill-rule="evenodd" d="M10.5 3.5a2.5 2.5 0 0 0-5 0V4h5v-.5zm1 0V4H15v10a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V4h3.5v-.5a3.5 3.5 0 1 1 7 0zM8.5 8a.5.5 0 0 0-1 0v1.5H6a.5.5 0 0 0 0 1h1.5V12a.5.5 0 0 0 1 0v-1.5H10a.5.5 0 0 0 0-1H8.5V8z"/>
-                                              </svg>
-                                        </button>
-                                        
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="col-lg-4 col-md-6 col-sm-10 offset-md-0 offset-sm-1 pt-lg-4 pt-4">
-                            <div class="card"> <img class="card-img-top" src="products/frozen/meatballs.png" style="padding: 20px;height: 250 ;width: 250;">
-                                <div class="card-body">
-                                    <h5 class="font-weight-bold pt-1">Meatballs</h5>
-                                    <div class="text-muted description">Uni beef meatballs</div>
-                                        <div class="h6 font-weight-bold">RM 7.99</div>
-                                        <div class="input-group">
+                            <div class="col-lg-4 col-md-6 col-sm-10 offset-md-0 offset-sm-1 pt-lg-4 pt-4">
+                                <div class="card"> <img class="card-img-top" src="products/frozen/yoghurt.png" style="padding: 20px;height: 250 ;width: 250;">
+                                    <div class="card-body">
+                                        <h5 class="font-weight-bold pt-1">Yoghurt</h5>
+                                        <div class="text-muted description">Nestle fat-free strawberry</div>
+                                            <div class="h6 font-weight-bold">RM 1.85</div>
+                                            <div class="input-group">
+                                                
+                                                <button class="quantity-left-minus btn btn-outline-secondary" type="button" width="16" height="16">-</button>
                                             
-                                            <button class="quantity-left-minus btn btn-outline-secondary" type="button" width="16" height="16">-</button>
-                                        
-                                        <div class = "quantity-input">
-                                            <input type="text" id="quantity" name="quantity" class="form-control" value ="1" min="1" max="100" style="max-width:50px">
-                                        </div>
-                                        
-                                          <button class="quantity-right-plus btn btn-outline-secondary" type="button" width="16" height="16">+</button>
-                                        
-                                        <button class="btn btn-primary" id = "add2list" style = "margin-left: 10px;" onclick="openModal()">
-                                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-bag-plus-fill" viewBox="0 0 16 16">
-                                                <path fill-rule="evenodd" d="M10.5 3.5a2.5 2.5 0 0 0-5 0V4h5v-.5zm1 0V4H15v10a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V4h3.5v-.5a3.5 3.5 0 1 1 7 0zM8.5 8a.5.5 0 0 0-1 0v1.5H6a.5.5 0 0 0 0 1h1.5V12a.5.5 0 0 0 1 0v-1.5H10a.5.5 0 0 0 0-1H8.5V8z"/>
-                                              </svg>
-                                        </button>
-                                        
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-4 col-md-6 col-sm-10 offset-md-0 offset-sm-1 pt-lg-4 pt-4">
-                            <div class="card"> <img class="card-img-top" src="products/frozen/yoghurt.png" style="padding: 20px;height: 250 ;width: 250;">
-                                <div class="card-body">
-                                    <h5 class="font-weight-bold pt-1">Yoghurt</h5>
-                                    <div class="text-muted description">Nestle fat-free strawberry</div>
-                                        <div class="h6 font-weight-bold">RM 1.85</div>
-                                        <div class="input-group">
+                                            <div class = "quantity-input">
+                                                <input type="text" id="quantity" name="quantity" class="form-control" value ="1" min="1" max="100" style="max-width:50px">
+                                            </div>
                                             
-                                            <button class="quantity-left-minus btn btn-outline-secondary" type="button" width="16" height="16">-</button>
-                                        
-                                        <div class = "quantity-input">
-                                            <input type="text" id="quantity" name="quantity" class="form-control" value ="1" min="1" max="100" style="max-width:50px">
+                                              <button class="quantity-right-plus btn btn-outline-secondary" type="button" width="16" height="16">+</button>
+                                            
+                                            <button class="btn btn-primary" id = "add2list" style = "margin-left: 10px;" onclick="openModal()">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-bag-plus-fill" viewBox="0 0 16 16">
+                                                    <path fill-rule="evenodd" d="M10.5 3.5a2.5 2.5 0 0 0-5 0V4h5v-.5zm1 0V4H15v10a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V4h3.5v-.5a3.5 3.5 0 1 1 7 0zM8.5 8a.5.5 0 0 0-1 0v1.5H6a.5.5 0 0 0 0 1h1.5V12a.5.5 0 0 0 1 0v-1.5H10a.5.5 0 0 0 0-1H8.5V8z"/>
+                                                  </svg>
+                                            </button>
+                                            
                                         </div>
-                                        
-                                          <button class="quantity-right-plus btn btn-outline-secondary" type="button" width="16" height="16">+</button>
-                                        
-                                        <button class="btn btn-primary" id = "add2list" style = "margin-left: 10px;" onclick="openModal()">
-                                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-bag-plus-fill" viewBox="0 0 16 16">
-                                                <path fill-rule="evenodd" d="M10.5 3.5a2.5 2.5 0 0 0-5 0V4h5v-.5zm1 0V4H15v10a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V4h3.5v-.5a3.5 3.5 0 1 1 7 0zM8.5 8a.5.5 0 0 0-1 0v1.5H6a.5.5 0 0 0 0 1h1.5V12a.5.5 0 0 0 1 0v-1.5H10a.5.5 0 0 0 0-1H8.5V8z"/>
-                                              </svg>
-                                        </button>
-                                        
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
+                
             </section>
         </div>
         <div id="listModal" class="modal">
