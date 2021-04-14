@@ -1,0 +1,71 @@
+* {
+    box-sizing: border-box;
+    }
+  
+  /* Full-width input box */
+  
+    input[type=text], input[type=password] {
+    width: 50%;
+    padding: 10px;
+    margin: 5px 0 5px 0;
+    display: block ;
+    border: plum;
+    background: #e7e4eb;
+  }
+  /*background colour of the input box*/
+  input[type=text]:focus, input[type=password]:focus {
+    background-color: rgb(189, 154, 235);
+    outline: none;
+  }
+  /*line*/
+  hr {
+    border: 4px solid #d33636;
+    margin-bottom: 15px;
+  }
+  
+  /* Set a style for sign up and cancel buttons */
+  button {
+    background-color: #b745e4;
+    color: black;
+    padding: 10px 15px;
+    margin: 10px 0;
+    border: none;
+    cursor: pointer;
+    width: 40%;
+    opacity: 10;
+  }
+  button:hover {
+    opacity:0.7;
+  }
+  /* Add padding to container elements */
+  .container {
+    padding-left: 250px;
+    padding-top: 150px;
+  }
+  
+  /* Clear floats */
+  .submit::after {
+    content: "";
+    clear: both;
+    display: table;
+  }
+  
+  /* Change styles for cancel button and signup button on extra small screens 
+  @media screen and (max-width: 400px) {
+    .cancelbutton, .signupbutton {
+      width: 100%;
+    }
+  }*/
+  .otherloginmethod {
+    padding: 0 15px;
+    margin: 5px 0;
+    text-align: center;
+    width: 90%;
+    opacity: 10;
+  }
+  .fb, .google 
+  {
+    float: inline-start;
+    width:45%;
+  } 
+  
