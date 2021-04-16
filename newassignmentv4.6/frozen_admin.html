@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial scale=1, shrink-to-fit=no">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href = "style.css">
+        <title>Products</title>
+        
+    </head>
+    <body>
+        <header>
+
+            <div class="container">
+                <div class="d-flex bd-highlight mb-3">
+                    <div class="p-2 bd-highlight">
+    
+                        <form class="form col-12 col-lg-auto mb-3 mb-lg-0 ">
+                            <input class="filter" type="search" name = "search" placeholder="Search... " ></form>
+                                      
+                    </div>
+                    <div class="ml-auto p-2 bd-highlight">
+                        <a href="#"> <img src="shopping-list.jpg" alt="shopping-list " width="40 " height="40 "></a>
+                        <button class="navbar-toggler " type="button " data-toggle="collapse " data-target="#navbarCollapse " aria-controls="navbarCollapse " aria-expanded="false " aria-label="Toggle navigation "></div>
+                  </div>
+        </div>
+        </header>
+    
+        <nav class="navbar navbar-expand-md navbar-dark fixed-top " style="background-color: #eacefe; ">
+            <a href="index.html"> <img src="logo.jpg " alt="logo " width="150 " height="40 "></a>
+            <button class="navbar-toggler " type="button " data-toggle="collapse " data-target="#navbarCollapse " aria-controls="navbarCollapse " aria-expanded="false " aria-label="Toggle navigation ">
+        <span class="navbar-toggler-icon "></span>
+            </button>
+                        <div class="collapse navbar-collapse " id="navbarCollapse ">
+                            <ul class="navbar-nav mr-auto ">
+                                <li class="nav-item ">
+                                    <a class="nav-link " style="color: #541191; " href="index.html">Home</a>
+                                </li>
+                                <li class="nav-item dropdown ">
+                                    <a class="nav-link dropdown-toggle " style="color: #541191; " href="admin_products.html" id="navbarDropdownMenuLink " role="button " data-toggle="dropdown " aria-haspopup="true " aria-expanded="false ">
+                          Category
+                        </a>
+                                    <div class="dropdown-menu " aria-labelledby="navbarDropdownMenuLink ">
+                                        <a class="dropdown-item " href="# ">Cereal</a>
+                                        <a class="dropdown-item " href="# ">Canned Food</a>
+                                        <a class="dropdown-item " href="# ">Rice</a>
+                                    </div>
+                                </li>
+                                <li class="nav-item ">
+                                    <a class="nav-link " style="color: #541191; " href="shoppinglist.html">My Shopping List</a>
+                                </li>
+                                <li class="nav-item ">
+                                    <a class="nav-link " style="color: #541191; " href="# ">History</a>
+                                </li>
+                            </ul>
+                            <ul class="nav ">
+                                <li class="nav-item "><a href="index.html" class="nav-link px-2 " style="color: #541191; ">Logout</a></li>
+                                <li class="nav-item "><a href="userprofile.html" class="nav-link px-2 " style="color: #541191; ">
+                                  <img src="https://bootdey.com/img/Content/avatar/avatar7.png" alt="User" class="rounded-circle" width="30"></a></li>
+                            </ul>
+    
+                        </div>
+                        </nav>
+        <div class = "wrapper">
+            <div class="h1">Products</div>
+            <section id="sidebar">
+                <div class="py-3">
+                    <h5 class="font-weight-bold">Categories</h5>
+                    <ul class="list-group">
+                        <li class="list-group-item list-group-item-action d-flex justify-content-between align-items-center category" onclick="document.location='drinks_admin.html'"> Drinks <span class="badge badge-primary badge-pill">4</span></li>
+                        <li class="list-group-item list-group-item-action d-flex justify-content-between align-items-center category" onclick="document.location='dry_admin.html'"> Dry food <span class="badge badge-primary badge-pill">4</span> </li>
+                        <li class="list-group-item list-group-item-action d-flex justify-content-between align-items-center category" onclick="document.location='fresh_admin.html'"> Fresh food <span class="badge badge-primary badge-pill">4</span> </li>
+                        <li class="list-group-item list-group-item-action d-flex justify-content-between align-items-center category" onclick="document.location='frozen_admin.html'"> Frozen food <span class="badge badge-primary badge-pill">4</span> </li>
+                    </ul>
+                </div>
+            </section>
+            <!--Products section-->
+            <section id="products">
+                <div class="card-group">
+                    <div class="container py-3">
+                        <div class="row">
+                            <div class="col-lg-4 col-md-6 col-sm-10 offset-md-0 offset-sm-1 pt-lg-4 pt-4">
+                                <div class="card" data-string="Butter"> <img class="card-img-top" src="products/frozen/butter.png" style="padding: 20px;height: 250 ;width: 250;">
+                                    <div class="card-body">
+                                        <div class="col-sm-15 text-secondary"> 
+                                            <div class="form-row">
+                                            <div class="form-group col-md-15">
+                                            <input class="form-control" id="Product sub category" placeholder="Product Sub-category" type="text" required value="Butter">
+                                            </div></div></div>
+                                            <div class="col-sm-15 text-secondary"> 
+                                            <div class="form-row">
+                                            <div class="form-group col-md-15">
+                                            <input class="form-control" id="Product name" placeholder="Product Name" type="text" required value="Butter cube">
+                                            </div></div></div>
+                                            <div class="row">
+                                                <div class="col-sm-3"><h6 class="font-weight-bold">RM</h6></div>
+                                            <div class="col-sm-9 text-secondary"> 
+                                            <div class="form-row">
+                                            <div class="col-md-12">
+                                            <input class="form-control" id="Price" placeholder="Price" type="text" required value="18.90">
+                                            </div></div></div></div>
+                                            <div class="pt-lg-3"></div>
+                                            <div class="input-group">
+                                            
+                                            <div style="display: inline-block;">    
+                                                <button class="btn btn-primary" id="save"  type="submit" style="margin-left: 25px;">Save</button>
+                                                <button class="btn btn-danger" id="delete" type="submit" style="margin-left: 20px;">Delete</button>
+                                            </div>
+                                            </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-6 col-sm-10 offset-md-0 offset-sm-1 pt-lg-4 pt-4">
+                                <div class="card" data-string="Ice cream"> <img class="card-img-top" src="products/frozen/ice cream.png" style="padding: 20px;height: 250 ;width: 250;">
+                                    <div class="card-body">
+                                        <div class="col-sm-15 text-secondary"> 
+                                            <div class="form-row">
+                                            <div class="form-group col-md-15">
+                                            <input class="form-control" id="Product sub category" placeholder="Product Sub-category" type="text" required value="Ice cream">
+                                            </div></div></div>
+                                            <div class="col-sm-15 text-secondary"> 
+                                            <div class="form-row">
+                                            <div class="form-group col-md-15">
+                                            <input class="form-control" id="Product name" placeholder="Product Name" type="text" required value="Magnum white chocolate">
+                                            </div></div></div>
+                                            <div class="row">
+                                                <div class="col-sm-3"><h6 class="font-weight-bold">RM</h6></div>
+                                            <div class="col-sm-9 text-secondary"> 
+                                            <div class="form-row">
+                                            <div class="col-md-12">
+                                            <input class="form-control" id="Price" placeholder="Price" type="text" required value="15.60">
+                                            </div></div></div></div>
+                                            <div class="pt-lg-3"></div>
+                                            <div class="input-group">
+                                            
+                                            <div style="display: inline-block;">    
+                                                <button class="btn btn-primary" id="save"  type="submit" style="margin-left: 25px;">Save</button>
+                                                <button class="btn btn-danger" id="delete" type="submit" style="margin-left: 20px;">Delete</button>
+                                            </div>
+                                            </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-6 col-sm-10 offset-md-0 offset-sm-1 pt-lg-4 pt-4">
+                                <div class="card" data-string="meatballs"> <img class="card-img-top" src="products/frozen/meatballs.png" style="padding: 20px;height: 250 ;width: 250;">
+                                    <div class="card-body">
+                                        <div class="col-sm-15 text-secondary"> 
+                                            <div class="form-row">
+                                            <div class="form-group col-md-15">
+                                            <input class="form-control" id="Product sub category" placeholder="Product Sub-category" type="text" required value="Meatballs">
+                                            </div></div></div>
+                                            <div class="col-sm-15 text-secondary"> 
+                                            <div class="form-row">
+                                            <div class="form-group col-md-15">
+                                            <input class="form-control" id="Product name" placeholder="Product Name" type="text" required value="Uni beef meatballs">
+                                            </div></div></div>
+                                            <div class="row">
+                                                <div class="col-sm-3"><h6 class="font-weight-bold">RM</h6></div>
+                                            <div class="col-sm-9 text-secondary"> 
+                                            <div class="form-row">
+                                            <div class="col-md-12">
+                                            <input class="form-control" id="Price" placeholder="Price" type="text" required value="7.99">
+                                            </div></div></div></div>
+                                            <div class="pt-lg-3"></div>
+                                            <div class="input-group">
+                                            
+                                            <div style="display: inline-block;">    
+                                                <button class="btn btn-primary" id="save"  type="submit" style="margin-left: 25px;">Save</button>
+                                                <button class="btn btn-danger" id="delete" type="submit" style="margin-left: 20px;">Delete</button>
+                                            </div>
+                                            </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-6 col-sm-10 offset-md-0 offset-sm-1 pt-lg-4 pt-4">
+                                <div class="card" data-string="Yoghurt"> <img class="card-img-top" src="products/frozen/yoghurt.png" style="padding: 20px;height: 250 ;width: 250;">
+                                    <div class="card-body">
+                                        <div class="col-sm-15 text-secondary"> 
+                                            <div class="form-row">
+                                            <div class="form-group col-md-15">
+                                            <input class="form-control" id="Product sub category" placeholder="Product Sub-category" type="text" required value="Yogurt">
+                                            </div></div></div>
+                                            <div class="col-sm-15 text-secondary"> 
+                                            <div class="form-row">
+                                            <div class="form-group col-md-15">
+                                            <input class="form-control" id="Product name" placeholder="Product Name" type="text" required value="Nestle fat-free strawberry">
+                                            </div></div></div>
+                                            <div class="row">
+                                                <div class="col-sm-3"><h6 class="font-weight-bold">RM</h6></div>
+                                            <div class="col-sm-9 text-secondary"> 
+                                            <div class="form-row">
+                                            <div class="col-md-12">
+                                            <input class="form-control" id="Price" placeholder="Price" type="text" required value="1.85">
+                                            </div></div></div></div>
+                                            <div class="pt-lg-3"></div>
+                                            <div class="input-group">
+                                            
+                                            <div style="display: inline-block;">    
+                                                <button class="btn btn-primary" id="save"  type="submit" style="margin-left: 25px;">Save</button>
+                                                <button class="btn btn-danger" id="delete" type="submit" style="margin-left: 20px;">Delete</button>
+                                            </div>
+                                            </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="offset-md-0 offset-sm-1 pt-lg-4 pt-4">
+                        <div class="container text-center" id="addproduct"><button type="submit" class="btn btn-dark btn-lg">Add Product</button>
+                        </div>
+                    </div>
+                </div>
+
+            </section>
+        </div>
+        <div id="listModal" class="modal">
+            <div class="modal-content">
+                <div class = "modal-header">
+                    <span class = "close" onclick = "closeModal()">&times;</span>
+                </div>
+                <div class = "modal-body">
+                    <ul>
+                        <li class="list-group-item list-group-item-action d-flex justify-content-between align-items-center category" onclick="alert('Item added to House list')"> House</li>
+                        <li class="list-group-item list-group-item-action d-flex justify-content-between align-items-center category" onclick="alert('Item added to Office list')"> Office</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="container-fluid pb-0 mb-0 justify-content-center text-light ">
+            <footer>
+                <div class="row my-1 justify-content-center py-5">
+                    <div class="col-11">
+                        <div class="row ">
+                            <div class="col-xl-8 col-md-4 col-sm-4 col-12 my-auto mx-auto a">
+                                <a href="index.html "> <img src="logo.jpg" alt="logo " width="250 " height="70 "></a>
+                                <!-- <h3 class="text-muted mb-md-0 mb-5 bold-text">Shoppinglah</h3> -->
+                            </div>
+                            <div class="col-xl-2 col-md-4 col-sm-4 col-12">
+                                <h6 class="mb-3 mb-lg-4 bold-text "><b>About Us</b></h6>
+                                <ul class="list-unstyled">
+                                    <li>Our team</li>
+                                    <li>What we do</li>
+                                    <li>Portfolio</li>
+                                </ul>
+                            </div>
+                            <div class="col-xl-2 col-md-4 col-sm-4 col-12">
+                                <h6 class="mb-3 mb-lg-4 text-muted bold-text mt-sm-0 mt-5"><b>ADDRESS</b></h6>
+                                <p class="mb-1">Lot 10 Jalan Kuchai Lama</p>
+                                <p class="mb-1">53400</p>
+                                <p class="mb-1">Kuala Lumpur</p>
+                            </div>
+                        </div>
+                        <div class="row ">
+                            <div class="col-xl-8 col-md-4 col-sm-4 col-auto my-md-0 mt-5 order-sm-1 order-3 align-self-end">
+                                <p class="social text-muted mb-0 pb-0 bold-text"> <span class="mx-2"><i class="fa fa-facebook" aria-hidden="true"></i></span> <span class="mx-2"><i class="fa fa-linkedin-square" aria-hidden="true"></i></span> <span class="mx-2"><i class="fa fa-twitter" aria-hidden="true"></i></span>                                                <span class="mx-2"><i class="fa fa-instagram" aria-hidden="true"></i></span> </p><small class="rights"><span>&#174;</span> Shoppinglah All Rights Reserved.</small>
+                            </div>
+                            <div class="col-xl-2 col-md-4 col-sm-4 col-auto order-1 align-self-end ">
+                                <h6 class="mt-55 mt-2 text-muted bold-text"><b>Contact Us</b></h6><small> <span><i class="fa fa-envelope" aria-hidden="true"></i></span> shoppinglah@gmail.com</small>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </footer>
+        </div>
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script>
+        <script type="text/javascript" src="productscript.js"></script>
+</body>
+</html>
