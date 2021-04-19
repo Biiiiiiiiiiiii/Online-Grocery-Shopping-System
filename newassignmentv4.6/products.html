@@ -91,13 +91,13 @@
                                             <div class="h6 font-weight-bold">RM 8.99</div>
                                             <div class="input-group">
                                                 
-                                                    <button class="quantity-left-minus btn btn-outline-secondary" type="button" width="16" height="16">-</button>
+                                                    <button class="quantity-left-minus btn btn-outline-secondary" type="button" width="16" height="16" onclick="minus(this)">-</button>
                                                 
                                                 <div class = "quantity-input">
-                                                    <input type="text" id="quantity" name="quantity" class="form-control" value ="1" min="1" max="100" style="max-width:50px">
+                                                    <input type="text" id="quantity" class="form-control" value ="1" min="1" max="100" style="max-width:50px">
                                                 </div>
                                                 
-                                                  <button class="quantity-right-plus btn btn-outline-secondary" type="button" width="16" height="16">+</button>
+                                                  <button class="quantity-right-plus btn btn-outline-secondary" type="button" width="16" height="16" onclick="plus(this)">+</button>
                                                 
                                                 <button class="btn btn-primary" id = "add2list" style = "margin-left: 10px;" onclick="openModal()">
                                                     <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-bag-plus-fill" viewBox="0 0 16 16">
@@ -117,21 +117,21 @@
                                             <div class="h6 font-weight-bold">RM 6.49</div>
                                             <div class="input-group">
                                                 
-                                                    <button class="quantity-left-minus btn btn-outline-secondary" type="button" width="16" height="16">-</button>
-                                                
-                                                <div class = "quantity-input">
-                                                    <input type="text" id="quantity" name="quantity" class="form-control" value ="1" min="1" max="100" style="max-width:50px">
-                                                </div>
-                                                
-                                                  <button class="quantity-right-plus btn btn-outline-secondary" type="button" width="16" height="16">+</button>
-                                                
-                                                <button class="btn btn-primary" id = "add2list" style = "margin-left: 10px;" onclick="openModal()">
-                                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-bag-plus-fill" viewBox="0 0 16 16">
-                                                        <path fill-rule="evenodd" d="M10.5 3.5a2.5 2.5 0 0 0-5 0V4h5v-.5zm1 0V4H15v10a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V4h3.5v-.5a3.5 3.5 0 1 1 7 0zM8.5 8a.5.5 0 0 0-1 0v1.5H6a.5.5 0 0 0 0 1h1.5V12a.5.5 0 0 0 1 0v-1.5H10a.5.5 0 0 0 0-1H8.5V8z"/>
-                                                      </svg>
-                                                </button>
-                                                
+                                                <button class="quantity-left-minus btn btn-outline-secondary" type="button" width="16" height="16" onclick="minus(this)">-</button>
+                                            
+                                            <div class = "quantity-input">
+                                                <input type="text" id="quantity" class="form-control" value ="1" min="1" max="100" style="max-width:50px">
                                             </div>
+                                            
+                                              <button class="quantity-right-plus btn btn-outline-secondary" type="button" width="16" height="16" onclick="plus(this)">+</button>
+                                            
+                                            <button class="btn btn-primary" id = "add2list" style = "margin-left: 10px;" onclick="openModal()">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-bag-plus-fill" viewBox="0 0 16 16">
+                                                    <path fill-rule="evenodd" d="M10.5 3.5a2.5 2.5 0 0 0-5 0V4h5v-.5zm1 0V4H15v10a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V4h3.5v-.5a3.5 3.5 0 1 1 7 0zM8.5 8a.5.5 0 0 0-1 0v1.5H6a.5.5 0 0 0 0 1h1.5V12a.5.5 0 0 0 1 0v-1.5H10a.5.5 0 0 0 0-1H8.5V8z"/>
+                                                  </svg>
+                                            </button>
+                                            
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -143,13 +143,13 @@
                                             <div class="h6 font-weight-bold">RM 2.00</div>
                                             <div class="input-group">
                                                 
-                                                <button class="quantity-left-minus btn btn-outline-secondary" type="button" width="16" height="16">-</button>
+                                                <button class="quantity-left-minus btn btn-outline-secondary" type="button" width="16" height="16" onclick="minus(this)">-</button>
                                             
                                             <div class = "quantity-input">
-                                                <input type="text" id="quantity" name="quantity" class="form-control" value ="1" min="1" max="100" style="max-width:50px">
+                                                <input type="text" id="quantity" class="form-control" value ="1" min="1" max="100" style="max-width:50px">
                                             </div>
                                             
-                                              <button class="quantity-right-plus btn btn-outline-secondary" type="button" width="16" height="16">+</button>
+                                              <button class="quantity-right-plus btn btn-outline-secondary" type="button" width="16" height="16" onclick="plus(this)">+</button>
                                             
                                             <button class="btn btn-primary" id = "add2list" style = "margin-left: 10px;" onclick="openModal()">
                                                 <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-bag-plus-fill" viewBox="0 0 16 16">
@@ -169,13 +169,13 @@
                                             <div class="h6 font-weight-bold">RM 5.50</div>
                                             <div class="input-group">
                                                 
-                                                <button class="quantity-left-minus btn btn-outline-secondary" type="button" width="16" height="16">-</button>
+                                                <button class="quantity-left-minus btn btn-outline-secondary" type="button" width="16" height="16" onclick="minus(this)">-</button>
                                             
                                             <div class = "quantity-input">
-                                                <input type="text" id="quantity" name="quantity" class="form-control" value ="1" min="1" max="100" style="max-width:50px">
+                                                <input type="text" id="quantity" class="form-control" value ="1" min="1" max="100" style="max-width:50px">
                                             </div>
                                             
-                                              <button class="quantity-right-plus btn btn-outline-secondary" type="button" width="16" height="16">+</button>
+                                              <button class="quantity-right-plus btn btn-outline-secondary" type="button" width="16" height="16" onclick="plus(this)">+</button>
                                             
                                             <button class="btn btn-primary" id = "add2list" style = "margin-left: 10px;" onclick="openModal()">
                                                 <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-bag-plus-fill" viewBox="0 0 16 16">
@@ -195,13 +195,13 @@
                                             <div class="h6 font-weight-bold">RM 18.90</div>
                                             <div class="input-group">
                                                 
-                                                <button class="quantity-left-minus btn btn-outline-secondary" type="button" width="16" height="16">-</button>
+                                                <button class="quantity-left-minus btn btn-outline-secondary" type="button" width="16" height="16" onclick="minus(this)">-</button>
                                             
                                             <div class = "quantity-input">
-                                                <input type="text" id="quantity" name="quantity" class="form-control" value ="1" min="1" max="100" style="max-width:50px">
+                                                <input type="text" id="quantity" class="form-control" value ="1" min="1" max="100" style="max-width:50px">
                                             </div>
                                             
-                                              <button class="quantity-right-plus btn btn-outline-secondary" type="button" width="16" height="16">+</button>
+                                              <button class="quantity-right-plus btn btn-outline-secondary" type="button" width="16" height="16" onclick="plus(this)">+</button>
                                             
                                             <button class="btn btn-primary" id = "add2list" style = "margin-left: 10px;" onclick="openModal()">
                                                 <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-bag-plus-fill" viewBox="0 0 16 16">
@@ -221,13 +221,13 @@
                                             <div class="h6 font-weight-bold">RM 15.60</div>
                                             <div class="input-group">
                                                 
-                                                <button class="quantity-left-minus btn btn-outline-secondary" type="button" width="16" height="16">-</button>
+                                                <button class="quantity-left-minus btn btn-outline-secondary" type="button" width="16" height="16" onclick="minus(this)">-</button>
                                             
                                             <div class = "quantity-input">
-                                                <input type="text" id="quantity" name="quantity" class="form-control" value ="1" min="1" max="100" style="max-width:50px">
+                                                <input type="text" id="quantity" class="form-control" value ="1" min="1" max="100" style="max-width:50px">
                                             </div>
                                             
-                                              <button class="quantity-right-plus btn btn-outline-secondary" type="button" width="16" height="16">+</button>
+                                              <button class="quantity-right-plus btn btn-outline-secondary" type="button" width="16" height="16" onclick="plus(this)">+</button>
                                             
                                             <button class="btn btn-primary" id = "add2list" style = "margin-left: 10px;" onclick="openModal()">
                                                 <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-bag-plus-fill" viewBox="0 0 16 16">
@@ -247,13 +247,13 @@
                                             <div class="h6 font-weight-bold">RM 7.99</div>
                                             <div class="input-group">
                                                 
-                                                <button class="quantity-left-minus btn btn-outline-secondary" type="button" width="16" height="16">-</button>
+                                                <button class="quantity-left-minus btn btn-outline-secondary" type="button" width="16" height="16" onclick="minus(this)">-</button>
                                             
                                             <div class = "quantity-input">
-                                                <input type="text" id="quantity" name="quantity" class="form-control" value ="1" min="1" max="100" style="max-width:50px">
+                                                <input type="text" id="quantity" class="form-control" value ="1" min="1" max="100" style="max-width:50px">
                                             </div>
                                             
-                                              <button class="quantity-right-plus btn btn-outline-secondary" type="button" width="16" height="16">+</button>
+                                              <button class="quantity-right-plus btn btn-outline-secondary" type="button" width="16" height="16" onclick="plus(this)">+</button>
                                             
                                             <button class="btn btn-primary" id = "add2list" style = "margin-left: 10px;" onclick="openModal()">
                                                 <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-bag-plus-fill" viewBox="0 0 16 16">
@@ -273,13 +273,13 @@
                                             <div class="h6 font-weight-bold">RM 1.85</div>
                                             <div class="input-group">
                                                 
-                                                <button class="quantity-left-minus btn btn-outline-secondary" type="button" width="16" height="16">-</button>
+                                                <button class="quantity-left-minus btn btn-outline-secondary" type="button" width="16" height="16" onclick="minus(this)">-</button>
                                             
                                             <div class = "quantity-input">
-                                                <input type="text" id="quantity" name="quantity" class="form-control" value ="1" min="1" max="100" style="max-width:50px">
+                                                <input type="text" id="quantity" class="form-control" value ="1" min="1" max="100" style="max-width:50px">
                                             </div>
                                             
-                                              <button class="quantity-right-plus btn btn-outline-secondary" type="button" width="16" height="16">+</button>
+                                              <button class="quantity-right-plus btn btn-outline-secondary" type="button" width="16" height="16" onclick="plus(this)">+</button>
                                             
                                             <button class="btn btn-primary" id = "add2list" style = "margin-left: 10px;" onclick="openModal()">
                                                 <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-bag-plus-fill" viewBox="0 0 16 16">
@@ -298,21 +298,22 @@
                                         <div class="text-muted description">Apple</div>
                                             <div class="h6 font-weight-bold">RM 2.00</div>
                                             <div class="input-group">
-                                                <div class="input-group-append">
-                                                    <button class="btn btn-outline-secondary" type="button" width="16" height="16">-</button>
-                                                </div>
-                                                <div class = "quantity-input">
-                                                    <input type="text" class="form-control" value ="1" style="max-width:50px">
-                                                </div>
-                                                <div class="input-group-append">
-                                                  <button class="btn btn-outline-secondary" type="button" width="16" height="16">+</button>
-                                                </div>
-                                                <a href="#" class="btn btn-primary" style = "margin-left: 10px;">
-                                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-bag-plus-fill" viewBox="0 0 16 16">
-                                                        <path fill-rule="evenodd" d="M10.5 3.5a2.5 2.5 0 0 0-5 0V4h5v-.5zm1 0V4H15v10a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V4h3.5v-.5a3.5 3.5 0 1 1 7 0zM8.5 8a.5.5 0 0 0-1 0v1.5H6a.5.5 0 0 0 0 1h1.5V12a.5.5 0 0 0 1 0v-1.5H10a.5.5 0 0 0 0-1H8.5V8z"/>
-                                                      </svg>
-                                                </a>
+                                                
+                                                <button class="quantity-left-minus btn btn-outline-secondary" type="button" width="16" height="16" onclick="minus(this)">-</button>
+                                            
+                                            <div class = "quantity-input">
+                                                <input type="text" id="quantity" class="form-control" value ="1" min="1" max="100" style="max-width:50px">
                                             </div>
+                                            
+                                              <button class="quantity-right-plus btn btn-outline-secondary" type="button" width="16" height="16" onclick="plus(this)">+</button>
+                                            
+                                            <button class="btn btn-primary" id = "add2list" style = "margin-left: 10px;" onclick="openModal()">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-bag-plus-fill" viewBox="0 0 16 16">
+                                                    <path fill-rule="evenodd" d="M10.5 3.5a2.5 2.5 0 0 0-5 0V4h5v-.5zm1 0V4H15v10a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V4h3.5v-.5a3.5 3.5 0 1 1 7 0zM8.5 8a.5.5 0 0 0-1 0v1.5H6a.5.5 0 0 0 0 1h1.5V12a.5.5 0 0 0 1 0v-1.5H10a.5.5 0 0 0 0-1H8.5V8z"/>
+                                                  </svg>
+                                            </button>
+                                            
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -323,21 +324,22 @@
                                         <div class="text-muted description">Broccoli</div>
                                             <div class="h6 font-weight-bold">RM 2.99</div>
                                             <div class="input-group">
-                                                <div class="input-group-append">
-                                                    <button class="btn btn-outline-secondary" type="button" width="16" height="16">-</button>
-                                                </div>
-                                                <div class = "quantity-input">
-                                                    <input type="text" class="form-control" value ="1" style="max-width:50px">
-                                                </div>
-                                                <div class="input-group-append">
-                                                  <button class="btn btn-outline-secondary" type="button" width="16" height="16">+</button>
-                                                </div>
-                                                <a href="#" class="btn btn-primary" style = "margin-left: 10px;">
-                                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-bag-plus-fill" viewBox="0 0 16 16">
-                                                        <path fill-rule="evenodd" d="M10.5 3.5a2.5 2.5 0 0 0-5 0V4h5v-.5zm1 0V4H15v10a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V4h3.5v-.5a3.5 3.5 0 1 1 7 0zM8.5 8a.5.5 0 0 0-1 0v1.5H6a.5.5 0 0 0 0 1h1.5V12a.5.5 0 0 0 1 0v-1.5H10a.5.5 0 0 0 0-1H8.5V8z"/>
-                                                      </svg>
-                                                </a>
+                                                
+                                                <button class="quantity-left-minus btn btn-outline-secondary" type="button" width="16" height="16" onclick="minus(this)">-</button>
+                                            
+                                            <div class = "quantity-input">
+                                                <input type="text" id="quantity" class="form-control" value ="1" min="1" max="100" style="max-width:50px">
                                             </div>
+                                            
+                                              <button class="quantity-right-plus btn btn-outline-secondary" type="button" width="16" height="16" onclick="plus(this)">+</button>
+                                            
+                                            <button class="btn btn-primary" id = "add2list" style = "margin-left: 10px;" onclick="openModal()">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-bag-plus-fill" viewBox="0 0 16 16">
+                                                    <path fill-rule="evenodd" d="M10.5 3.5a2.5 2.5 0 0 0-5 0V4h5v-.5zm1 0V4H15v10a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V4h3.5v-.5a3.5 3.5 0 1 1 7 0zM8.5 8a.5.5 0 0 0-1 0v1.5H6a.5.5 0 0 0 0 1h1.5V12a.5.5 0 0 0 1 0v-1.5H10a.5.5 0 0 0 0-1H8.5V8z"/>
+                                                  </svg>
+                                            </button>
+                                            
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -348,121 +350,22 @@
                                         <div class="text-muted description">Chicken Whole Leg</div>
                                             <div class="h6 font-weight-bold">RM 2.50</div>
                                             <div class="input-group">
-                                                <div class="input-group-append">
-                                                    <button class="btn btn-outline-secondary" type="button" width="16" height="16">-</button>
-                                                </div>
-                                                <div class = "quantity-input">
-                                                    <input type="text" class="form-control" value ="1" style="max-width:50px">
-                                                </div>
-                                                <div class="input-group-append">
-                                                  <button class="btn btn-outline-secondary" type="button" width="16" height="16">+</button>
-                                                </div>
-                                                <a href="#" class="btn btn-primary" style = "margin-left: 10px;">
-                                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-bag-plus-fill" viewBox="0 0 16 16">
-                                                        <path fill-rule="evenodd" d="M10.5 3.5a2.5 2.5 0 0 0-5 0V4h5v-.5zm1 0V4H15v10a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V4h3.5v-.5a3.5 3.5 0 1 1 7 0zM8.5 8a.5.5 0 0 0-1 0v1.5H6a.5.5 0 0 0 0 1h1.5V12a.5.5 0 0 0 1 0v-1.5H10a.5.5 0 0 0 0-1H8.5V8z"/>
-                                                      </svg>
-                                                </a>
+                                                
+                                                <button class="quantity-left-minus btn btn-outline-secondary" type="button" width="16" height="16" onclick="minus(this)">-</button>
+                                            
+                                            <div class = "quantity-input">
+                                                <input type="text" id="quantity" class="form-control" value ="1" min="1" max="100" style="max-width:50px">
                                             </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-lg-4 col-md-6 col-sm-10 offset-md-0 offset-sm-1 pt-lg-4 pt-4">
-                                <div class="card" data-string="Rice"> <img class="card-img-top" src="products/dry/jati rice 10kg.jpg" style="padding: 20px;height: 250px ;width: 250px;">
-                                    <div class="card-body">
-                                        <h5 class="font-weight-bold pt-1">Rice</h5>
-                                        <div class="text-muted description">Jati Rice 10kg</div>
-                                            <div class="h6 font-weight-bold">RM 27.99</div>
-                                            <div class="input-group">
-                                                <div class="input-group-append">
-                                                    <button class="btn btn-outline-secondary" type="button" width="16" height="16">-</button>
-                                                </div>
-                                                <div class = "quantity-input">
-                                                    <input type="text" class="form-control" value ="1" style="max-width:50px">
-                                                </div>
-                                                <div class="input-group-append">
-                                                  <button class="btn btn-outline-secondary" type="button" width="16" height="16">+</button>
-                                                </div>
-                                                <a href="#" class="btn btn-primary" style = "margin-left: 10px;">
-                                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-bag-plus-fill" viewBox="0 0 16 16">
-                                                        <path fill-rule="evenodd" d="M10.5 3.5a2.5 2.5 0 0 0-5 0V4h5v-.5zm1 0V4H15v10a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V4h3.5v-.5a3.5 3.5 0 1 1 7 0zM8.5 8a.5.5 0 0 0-1 0v1.5H6a.5.5 0 0 0 0 1h1.5V12a.5.5 0 0 0 1 0v-1.5H10a.5.5 0 0 0 0-1H8.5V8z"/>
-                                                      </svg>
-                                                </a>
-                                            </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-lg-4 col-md-6 col-sm-10 offset-md-0 offset-sm-1 pt-lg-4 pt-4">
-                                <div class="card" data-string="Biscuits"> <img class="card-img-top" src="products/dry/oat krunch dark choco.jpg" style="padding: 20px;height: 250px ;width: 250px;">
-                                    <div class="card-body">
-                                        <h5 class="font-weight-bold pt-1">Biscuits</h5>
-                                        <div class="text-muted description">Oat Krunch Dark Chocolate</div>
-                                            <div class="h6 font-weight-bold">RM 8.79</div>
-                                            <div class="input-group">
-                                                <div class="input-group-append">
-                                                    <button class="btn btn-outline-secondary" type="button" width="16" height="16">-</button>
-                                                </div>
-                                                <div class = "quantity-input">
-                                                    <input type="text" class="form-control" value ="1" style="max-width:50px">
-                                                </div>
-                                                <div class="input-group-append">
-                                                  <button class="btn btn-outline-secondary" type="button" width="16" height="16">+</button>
-                                                </div>
-                                                <a href="#" class="btn btn-primary" style = "margin-left: 10px;">
-                                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-bag-plus-fill" viewBox="0 0 16 16">
-                                                        <path fill-rule="evenodd" d="M10.5 3.5a2.5 2.5 0 0 0-5 0V4h5v-.5zm1 0V4H15v10a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V4h3.5v-.5a3.5 3.5 0 1 1 7 0zM8.5 8a.5.5 0 0 0-1 0v1.5H6a.5.5 0 0 0 0 1h1.5V12a.5.5 0 0 0 1 0v-1.5H10a.5.5 0 0 0 0-1H8.5V8z"/>
-                                                      </svg>
-                                                </a>
-                                            </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-lg-4 col-md-6 col-sm-10 offset-md-0 offset-sm-1 pt-lg-4 pt-4">
-                                <div class="card" data-string="Instant Noodles"> <img class="card-img-top" src="products/dry/maggi kari pack.jpg" style="padding: 20px;height: 250px ;width: 250px;">
-                                    <div class="card-body">
-                                        <h5 class="font-weight-bold pt-1">Instant Noodles</h5>
-                                        <div class="text-muted description">Maggi Kari 5*79g</div>
-                                            <div class="h6 font-weight-bold">RM 4.49</div>
-                                            <div class="input-group">
-                                                <div class="input-group-append">
-                                                    <button class="btn btn-outline-secondary" type="button" width="16" height="16">-</button>
-                                                </div>
-                                                <div class = "quantity-input">
-                                                    <input type="text" class="form-control" value ="1" style="max-width:50px">
-                                                </div>
-                                                <div class="input-group-append">
-                                                  <button class="btn btn-outline-secondary" type="button" width="16" height="16">+</button>
-                                                </div>
-                                                <a href="#" class="btn btn-primary" style = "margin-left: 10px;">
-                                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-bag-plus-fill" viewBox="0 0 16 16">
-                                                        <path fill-rule="evenodd" d="M10.5 3.5a2.5 2.5 0 0 0-5 0V4h5v-.5zm1 0V4H15v10a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V4h3.5v-.5a3.5 3.5 0 1 1 7 0zM8.5 8a.5.5 0 0 0-1 0v1.5H6a.5.5 0 0 0 0 1h1.5V12a.5.5 0 0 0 1 0v-1.5H10a.5.5 0 0 0 0-1H8.5V8z"/>
-                                                      </svg>
-                                                </a>
-                                            </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-lg-4 col-md-6 col-sm-10 offset-md-0 offset-sm-1 pt-lg-4 pt-4">
-                                <div class="card" data-string="Snacks"> <img class="card-img-top" src="products/dry/miaow green pea.jpg" style="padding: 20px;height: 250px ;width: 250px;">
-                                    <div class="card-body">
-                                        <h5 class="font-weight-bold pt-1">Snacks</h5>
-                                        <div class="text-muted description">Miaow Miaow Green Pea 60g</div>
-                                            <div class="h6 font-weight-bold">RM 2.50</div>
-                                            <div class="input-group">
-                                                <div class="input-group-append">
-                                                    <button class="btn btn-outline-secondary" type="button" width="16" height="16">-</button>
-                                                </div>
-                                                <div class = "quantity-input">
-                                                    <input type="text" class="form-control" value ="1" style="max-width:50px">
-                                                </div>
-                                                <div class="input-group-append">
-                                                  <button class="btn btn-outline-secondary" type="button" width="16" height="16">+</button>
-                                                </div>
-                                                <a href="#" class="btn btn-primary" style = "margin-left: 10px;">
-                                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-bag-plus-fill" viewBox="0 0 16 16">
-                                                        <path fill-rule="evenodd" d="M10.5 3.5a2.5 2.5 0 0 0-5 0V4h5v-.5zm1 0V4H15v10a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V4h3.5v-.5a3.5 3.5 0 1 1 7 0zM8.5 8a.5.5 0 0 0-1 0v1.5H6a.5.5 0 0 0 0 1h1.5V12a.5.5 0 0 0 1 0v-1.5H10a.5.5 0 0 0 0-1H8.5V8z"/>
-                                                      </svg>
-                                                </a>
-                                            </div>
+                                            
+                                              <button class="quantity-right-plus btn btn-outline-secondary" type="button" width="16" height="16" onclick="plus(this)">+</button>
+                                            
+                                            <button class="btn btn-primary" id = "add2list" style = "margin-left: 10px;" onclick="openModal()">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-bag-plus-fill" viewBox="0 0 16 16">
+                                                    <path fill-rule="evenodd" d="M10.5 3.5a2.5 2.5 0 0 0-5 0V4h5v-.5zm1 0V4H15v10a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V4h3.5v-.5a3.5 3.5 0 1 1 7 0zM8.5 8a.5.5 0 0 0-1 0v1.5H6a.5.5 0 0 0 0 1h1.5V12a.5.5 0 0 0 1 0v-1.5H10a.5.5 0 0 0 0-1H8.5V8z"/>
+                                                  </svg>
+                                            </button>
+                                            
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -473,24 +376,130 @@
                                         <div class="text-muted description">Chicken Eggs x10</div>
                                             <div class="h6 font-weight-bold">RM 3.79</div>
                                             <div class="input-group">
-                                                <div class="input-group-append">
-                                                    <button class="btn btn-outline-secondary" type="button" width="16" height="16">-</button>
-                                                </div>
-                                                <div class = "quantity-input">
-                                                    <input type="text" class="form-control" value ="1" style="max-width:50px">
-                                                </div>
-                                                <div class="input-group-append">
-                                                  <button class="btn btn-outline-secondary" type="button" width="16" height="16">+</button>
-                                                </div>
-                                                <a href="#" class="btn btn-primary" style = "margin-left: 10px;">
-                                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-bag-plus-fill" viewBox="0 0 16 16">
-                                                        <path fill-rule="evenodd" d="M10.5 3.5a2.5 2.5 0 0 0-5 0V4h5v-.5zm1 0V4H15v10a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V4h3.5v-.5a3.5 3.5 0 1 1 7 0zM8.5 8a.5.5 0 0 0-1 0v1.5H6a.5.5 0 0 0 0 1h1.5V12a.5.5 0 0 0 1 0v-1.5H10a.5.5 0 0 0 0-1H8.5V8z"/>
-                                                      </svg>
-                                                </a>
+                                                
+                                                <button class="quantity-left-minus btn btn-outline-secondary" type="button" width="16" height="16" onclick="minus(this)">-</button>
+                                            
+                                            <div class = "quantity-input">
+                                                <input type="text" id="quantity" class="form-control" value ="1" min="1" max="100" style="max-width:50px">
                                             </div>
+                                            
+                                              <button class="quantity-right-plus btn btn-outline-secondary" type="button" width="16" height="16" onclick="plus(this)">+</button>
+                                            
+                                            <button class="btn btn-primary" id = "add2list" style = "margin-left: 10px;" onclick="openModal()">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-bag-plus-fill" viewBox="0 0 16 16">
+                                                    <path fill-rule="evenodd" d="M10.5 3.5a2.5 2.5 0 0 0-5 0V4h5v-.5zm1 0V4H15v10a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V4h3.5v-.5a3.5 3.5 0 1 1 7 0zM8.5 8a.5.5 0 0 0-1 0v1.5H6a.5.5 0 0 0 0 1h1.5V12a.5.5 0 0 0 1 0v-1.5H10a.5.5 0 0 0 0-1H8.5V8z"/>
+                                                  </svg>
+                                            </button>
+                                            
+                                        </div>
                                     </div>
                                 </div>
                             </div>
+                            <div class="col-lg-4 col-md-6 col-sm-10 offset-md-0 offset-sm-1 pt-lg-4 pt-4">
+                                <div class="card" data-string="Rice"> <img class="card-img-top" src="products/dry/jati rice 10kg.jpg" style="padding: 20px;height: 250px ;width: 250px;">
+                                    <div class="card-body">
+                                        <h5 class="font-weight-bold pt-1">Rice</h5>
+                                        <div class="text-muted description">Jati Rice 10kg</div>
+                                            <div class="h6 font-weight-bold">RM 27.99</div>
+                                            <div class="input-group">
+                                                
+                                                <button class="quantity-left-minus btn btn-outline-secondary" type="button" width="16" height="16" onclick="minus(this)">-</button>
+                                            
+                                            <div class = "quantity-input">
+                                                <input type="text" id="quantity" class="form-control" value ="1" min="1" max="100" style="max-width:50px">
+                                            </div>
+                                            
+                                              <button class="quantity-right-plus btn btn-outline-secondary" type="button" width="16" height="16" onclick="plus(this)">+</button>
+                                            
+                                            <button class="btn btn-primary" id = "add2list" style = "margin-left: 10px;" onclick="openModal()">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-bag-plus-fill" viewBox="0 0 16 16">
+                                                    <path fill-rule="evenodd" d="M10.5 3.5a2.5 2.5 0 0 0-5 0V4h5v-.5zm1 0V4H15v10a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V4h3.5v-.5a3.5 3.5 0 1 1 7 0zM8.5 8a.5.5 0 0 0-1 0v1.5H6a.5.5 0 0 0 0 1h1.5V12a.5.5 0 0 0 1 0v-1.5H10a.5.5 0 0 0 0-1H8.5V8z"/>
+                                                  </svg>
+                                            </button>
+                                            
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-6 col-sm-10 offset-md-0 offset-sm-1 pt-lg-4 pt-4">
+                                <div class="card" data-string="Biscuits"> <img class="card-img-top" src="products/dry/oat krunch dark choco.jpg" style="padding: 20px;height: 250px ;width: 250px;">
+                                    <div class="card-body">
+                                        <h5 class="font-weight-bold pt-1">Biscuits</h5>
+                                        <div class="text-muted description">Oat Krunch Dark Chocolate</div>
+                                            <div class="h6 font-weight-bold">RM 8.79</div>
+                                            <div class="input-group">
+                                                
+                                                <button class="quantity-left-minus btn btn-outline-secondary" type="button" width="16" height="16" onclick="minus(this)">-</button>
+                                            
+                                            <div class = "quantity-input">
+                                                <input type="text" id="quantity" class="form-control" value ="1" min="1" max="100" style="max-width:50px">
+                                            </div>
+                                            
+                                              <button class="quantity-right-plus btn btn-outline-secondary" type="button" width="16" height="16" onclick="plus(this)">+</button>
+                                            
+                                            <button class="btn btn-primary" id = "add2list" style = "margin-left: 10px;" onclick="openModal()">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-bag-plus-fill" viewBox="0 0 16 16">
+                                                    <path fill-rule="evenodd" d="M10.5 3.5a2.5 2.5 0 0 0-5 0V4h5v-.5zm1 0V4H15v10a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V4h3.5v-.5a3.5 3.5 0 1 1 7 0zM8.5 8a.5.5 0 0 0-1 0v1.5H6a.5.5 0 0 0 0 1h1.5V12a.5.5 0 0 0 1 0v-1.5H10a.5.5 0 0 0 0-1H8.5V8z"/>
+                                                  </svg>
+                                            </button>
+                                            
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-6 col-sm-10 offset-md-0 offset-sm-1 pt-lg-4 pt-4">
+                                <div class="card" data-string="Instant Noodles"> <img class="card-img-top" src="products/dry/maggi kari pack.jpg" style="padding: 20px;height: 250px ;width: 250px;">
+                                    <div class="card-body">
+                                        <h5 class="font-weight-bold pt-1">Instant Noodles</h5>
+                                        <div class="text-muted description">Maggi Kari 5*79g</div>
+                                            <div class="h6 font-weight-bold">RM 4.49</div>
+                                            <div class="input-group">
+                                                
+                                                <button class="quantity-left-minus btn btn-outline-secondary" type="button" width="16" height="16" onclick="minus(this)">-</button>
+                                            
+                                            <div class = "quantity-input">
+                                                <input type="text" id="quantity" class="form-control" value ="1" min="1" max="100" style="max-width:50px">
+                                            </div>
+                                            
+                                              <button class="quantity-right-plus btn btn-outline-secondary" type="button" width="16" height="16" onclick="plus(this)">+</button>
+                                            
+                                            <button class="btn btn-primary" id = "add2list" style = "margin-left: 10px;" onclick="openModal()">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-bag-plus-fill" viewBox="0 0 16 16">
+                                                    <path fill-rule="evenodd" d="M10.5 3.5a2.5 2.5 0 0 0-5 0V4h5v-.5zm1 0V4H15v10a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V4h3.5v-.5a3.5 3.5 0 1 1 7 0zM8.5 8a.5.5 0 0 0-1 0v1.5H6a.5.5 0 0 0 0 1h1.5V12a.5.5 0 0 0 1 0v-1.5H10a.5.5 0 0 0 0-1H8.5V8z"/>
+                                                  </svg>
+                                            </button>
+                                            
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-6 col-sm-10 offset-md-0 offset-sm-1 pt-lg-4 pt-4">
+                                <div class="card" data-string="Snacks"> <img class="card-img-top" src="products/dry/miaow green pea.jpg" style="padding: 20px;height: 250px ;width: 250px;">
+                                    <div class="card-body">
+                                        <h5 class="font-weight-bold pt-1">Snacks</h5>
+                                        <div class="text-muted description">Miaow Miaow Green Pea 60g</div>
+                                            <div class="h6 font-weight-bold">RM 2.50</div>
+                                            <div class="input-group">
+                                                
+                                                <button class="quantity-left-minus btn btn-outline-secondary" type="button" width="16" height="16" onclick="minus(this)">-</button>
+                                            
+                                            <div class = "quantity-input">
+                                                <input type="text" id="quantity" class="form-control" value ="1" min="1" max="100" style="max-width:50px">
+                                            </div>
+                                            
+                                              <button class="quantity-right-plus btn btn-outline-secondary" type="button" width="16" height="16" onclick="plus(this)">+</button>
+                                            
+                                            <button class="btn btn-primary" id = "add2list" style = "margin-left: 10px;" onclick="openModal()">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-bag-plus-fill" viewBox="0 0 16 16">
+                                                    <path fill-rule="evenodd" d="M10.5 3.5a2.5 2.5 0 0 0-5 0V4h5v-.5zm1 0V4H15v10a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V4h3.5v-.5a3.5 3.5 0 1 1 7 0zM8.5 8a.5.5 0 0 0-1 0v1.5H6a.5.5 0 0 0 0 1h1.5V12a.5.5 0 0 0 1 0v-1.5H10a.5.5 0 0 0 0-1H8.5V8z"/>
+                                                  </svg>
+                                            </button>
+                                            
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
                         </div>
                     </div>
                 </div>
