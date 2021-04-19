@@ -10,22 +10,20 @@ $(".filter").on("keyup",function(){
 });
 
 
-    $('.quantity-right-plus').click(function(e){
-        e.preventDefault();
-        var quantity = parseInt($('#quantity').val());
-        // if not defined    
-            $('#quantity').val(quantity+1);
-            // increment
-    });
-    $('.quantity-left-minus').click(function(e){
-        e.preventDefault();
-        var quantity = parseInt($('#quantity').val());
-        // if not defined 
-            if(quantity>1){
-                $('#quantity').val(quantity-1);
-            // increment
+    function plus(e){
+        var quantity = e.parentElement.querySelector("#quantity");
+        var count = parseInt(quantity.value);
+        count++;
+        quantity.value = count;
+    };
+    function minus(e){
+        var quantity = e.parentElement.querySelector("#quantity");
+        var count = parseInt(quantity.value);
+            if(count>1){
+                count--;
+                quantity.value = count;
             }   
-    });
+    };
 
 function openModal(){
     document.getElementById("listModal").style.display = "block";
