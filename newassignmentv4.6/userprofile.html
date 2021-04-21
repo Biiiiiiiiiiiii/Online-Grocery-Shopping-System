@@ -111,6 +111,7 @@
     </div></div></div></div>
  
   <div class="container text-center"><button type="submit" class="btn btn-dark btn-lg">Save changes</button>
+      <button type="submit" id="button"class="btn btn-primary btn-lg" onclick="deletebtn()">Delete account</button>
   </div>
      
 </form></div>
@@ -173,6 +174,14 @@ function fasterPreview( uploader ) {
 $("#imageUpload").change(function(){
     fasterPreview( this );
 });
+    
+function popmessage(){
+    alert("Your changes have been saved");
+}
+
+function deletebtn(){
+    alert("Are you sure you want to delete your account?")
+}
 </script>
 
 <style>
