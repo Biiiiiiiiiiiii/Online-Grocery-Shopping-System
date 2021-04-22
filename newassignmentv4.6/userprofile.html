@@ -109,10 +109,33 @@
     </div></div></div>
     </div>
     </div></div></div></div>
- 
+      
+   <!-- Button trigger modal --><div class="container" style="margin-left: 50px">
+   <button type="button" class="btn btn-primary" style="background-color: #541191;" data-toggle="modal" data-target="#staticBackdrop">Delete account</button>
+</div>
+   <!-- Modal -->
+   <div class="modal fade" id="staticBackdrop" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+     <div class="modal-dialog modal-dialog-centered">
+       <div class="modal-content">
+         <div class="modal-header">
+           <h5 class="modal-title" id="staticBackdropLabel">Delete Account</h5>
+           <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+             <span aria-hidden="true">&times;</span>
+           </button>
+         </div>
+         <div class="modal-body">
+           Are you sure you want to delete account?
+         </div>
+         <div class="modal-footer">
+           <button type="button" class="btn btn-secondary" data-dismiss="modal">No</button>
+           <button type="button" class="btn btn-primary deletebtn" onclick="deletebtn()">Yes</button>
+         </div>
+       </div>
+     </div>
+   </div>
+      
   <div class="container text-center"><button type="submit" class="btn btn-dark btn-lg">Save changes</button>
-      <button type="submit" id="button"class="btn btn-primary btn-lg" onclick="deletebtn()">Delete account</button>
-  </div>
+     </div>
      
 </form></div>
 </main>
@@ -180,7 +203,8 @@ function popmessage(){
 }
 
 function deletebtn(){
-    alert("You delete your account")
+    alert("You delete your account");
+    setTimeout(function(){ window.location="index.html"; },500);
 }
 </script>
 
@@ -214,7 +238,9 @@ function deletebtn(){
   height: inherit;
   border-radius: 50%;
 }
-
+.deletebtn{
+    background-color: purple;
+}
 </style>
 </body>
 </html>
