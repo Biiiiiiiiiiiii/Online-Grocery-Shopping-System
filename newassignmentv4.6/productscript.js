@@ -27,6 +27,13 @@ $(".filter").on("keyup",function(){
             }   
     };
 
+    function popOut(_id){
+        if (confirm("Are you sure to delete this product?")) {
+            var product_id = "id"+_id;
+            document.getElementById(product_id).style.display='none';
+        }
+    }
+
 function openModal(){
     document.getElementById("listModal").style.display = "block";
 }
