@@ -6,7 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
-    
+    <link rel="stylesheet" href = "list_style.css">
+    <script type="text/javascript" src="productscript.js"></script>
     <title>My Shopping List</title>
 </head>
 
@@ -15,36 +16,40 @@
 <div class="d-flex bd-highlight mb-3">
       <div class="p-2 bd-highlight">
             <form class="form col-12 col-lg-auto mb-3 mb-lg-0 ">
-                <input type="search " class="form-control " placeholder="Search your item here... "></form>
+                <input type="search " class="form-control " placeholder="Search... "></form>
         </div>
         <div class="ml-auto p-2 bd-highlight">
-            <a href="# "> <img src="shopping-list.jpg" alt="shopping-list " width="40 " height="40 "></a>
             <button class="navbar-toggler " type="button " data-toggle="collapse " data-target="#navbarCollapse " aria-controls="navbarCollapse " aria-expanded="false " aria-label="Toggle navigation "></div>
         </div>
 </div>
 </header>
 <div class="container">
-<nav class="navbar navbar-expand-md navbar-dark fixed-top " style="background-color: #eacefe; ">
-    <a href="index.html "> <img src="logo.jpg " alt="logo " width="150 " height="40 "></a>
+  <nav class="navbar navbar-expand-md navbar-dark fixed-top " style="background-color: #eacefe; ">
+    <a href="index.html"> <img src="logo.jpg " alt="logo " width="150 " height="40 "></a>
     <button class="navbar-toggler " type="button " data-toggle="collapse " data-target="#navbarCollapse " aria-controls="navbarCollapse " aria-expanded="false " aria-label="Toggle navigation ">
-    <span class="navbar-toggler-icon "></span>
+<span class="navbar-toggler-icon "></span>
     </button>
-        <div class="collapse navbar-collapse " id="navbarCollapse ">
-            <ul class="navbar-nav mr-auto ">
-            <li class="nav-item ">
-                <a class="nav-link " style="color: #541191; " href="# ">Home</a></li>
-            <li class="nav-item dropdown ">
-                 <a class="nav-link dropdown-toggle " style="color: #541191; " href="# " id="navbarDropdownMenuLink " role="button " data-toggle="dropdown " aria-haspopup="true " aria-expanded="false ">
-                  Category
-                </a>
-                            <div class="dropdown-menu " aria-labelledby="navbarDropdownMenuLink ">
-                                <a class="dropdown-item " href="# ">Cereal</a>
-                                <a class="dropdown-item " href="# ">Canned Food</a>
-                                <a class="dropdown-item " href="# ">Rice</a>
-                            </div>
-                        </li>
+                <div class="collapse navbar-collapse " id="navbarCollapse ">
+                    <ul class="navbar-nav mr-auto ">
                         <li class="nav-item ">
-                            <a class="nav-link " style="color: #541191; " href="# ">My Shopping List</a>
+                            <a class="nav-link " style="color: #541191; " href="index.html">Home</a>
+                        </li>
+                            <li class="nav-item dropdown ">
+                        <div class="btn-group">
+                            <a class="nav-link " style="color: #541191; " href="products.html">Category</a>
+                            <button type="button" class="btn dropdown-toggle dropdown-toggle-split" style="background-color: #eacefe; " data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                              <span class="sr-only">Toggle Dropdown</span>
+                            </button>
+                            <div class="dropdown-menu">
+                                <a class="dropdown-item" href="drinks_page.html">Drinks</a>
+                                <a class="dropdown-item" href="dryfood_page.html">Dry Food</a>
+                                <a class="dropdown-item" href="fresh_page.html">Fresh Food</a>
+                                <a class="dropdown-item" href="frozen_page.html">Frozen Food</a>
+                            </div>
+                        </div>
+                    </li>
+                        <li class="nav-item ">
+                            <a class="nav-link " style="color: #541191; " href="shoppinglist.html">My Shopping List</a>
                         </li>
                         <li class="nav-item ">
                             <a class="nav-link " style="color: #541191; " href="# ">History</a>
@@ -53,10 +58,11 @@
                     <ul class="nav ">
                         <li class="nav-item "><a href="index.html" class="nav-link px-2 " style="color: #541191; ">Logout</a></li>
                         <li class="nav-item "><a href="userprofile.html" class="nav-link px-2 " style="color: #541191; ">
-                          <img src="https://bootdey.com/img/Content/avatar/avatar7.png" alt="Admin" class="rounded-circle" width="30"></a></li>
+                          <img src="https://bootdey.com/img/Content/avatar/avatar7.png" alt="User" class="rounded-circle" width="30"></a></li>
                     </ul>
-    </div>
-</nav>
+
+                </div>
+                </nav>
 <main>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js" integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous"></script>  
 
@@ -82,13 +88,16 @@
         <div class="card-body">
           <h2 class="card-title">Nescafe White Coffee</h2>
           <p class="card-text">RM8.99</p>
-            <div class="input-group">                       
-            <button class="quantity-left-minus btn btn-outline-secondary" type="button" width="16" height="16">-</button>
-                <div class = "quantity-input">
-                    <input type="text" id="quantity" name="quantity" class="form-control" value ="1" min="1" max="100" style="max-width:50px">
-                </div>
-            <button class="quantity-right-plus btn btn-outline-secondary" type="button" width="16" height="16">+</button>
-            </div>
+          <div class="input-group">
+                                               
+            <button class="quantity-left-minus btn btn-outline-secondary" type="button" width="16" height="16" onclick="minus(this)">-</button>
+        
+        <div class = "quantity-input">
+            <input type="text" id="quantity" class="form-control" value ="1" min="1" max="100" style="max-width:50px">
+        </div>
+        
+          <button class="quantity-right-plus btn btn-outline-secondary" type="button" width="16" height="16" onclick="plus(this)">+</button>                    </div>
+
         
             <br><button type="button" onclick="popFunction()" class="btn btn-outline-danger">Delete</button>
             <script>
@@ -109,13 +118,16 @@
         <div class="card-body">
           <h2 class="card-title">Fernleaf Full Cream Milk</h2>
           <p class="card-text">RM6.49</p>
-          <div class="input-group">                       
-            <button class="quantity-left-minus btn btn-outline-secondary" type="button" width="16" height="16">-</button>
-                <div class = "quantity-input">
-                    <input type="text" id="quantity" name="quantity" class="form-control" value ="1" min="1" max="100" style="max-width:50px">
-                </div>
-            <button class="quantity-right-plus btn btn-outline-secondary" type="button" width="16" height="16">+</button>
-            </div>
+          <div class="input-group">
+                                               
+            <button class="quantity-left-minus btn btn-outline-secondary" type="button" width="16" height="16" onclick="minus(this)">-</button>
+        
+        <div class = "quantity-input">
+            <input type="text" id="quantity" class="form-control" value ="1" min="1" max="100" style="max-width:50px">
+        </div>
+        
+          <button class="quantity-right-plus btn btn-outline-secondary" type="button" width="16" height="16" onclick="plus(this)">+</button>                    </div>
+
         
             <br><button type="button" onclick="popFunction()" class="btn btn-outline-danger">Delete</button>
             <script>
@@ -137,13 +149,16 @@
         <div class="card-body">
           <h2 class="card-title">Boh Green Tea</h2>
           <p class="card-text">RM5.50</p>
-          <div class="input-group">                       
-            <button class="quantity-left-minus btn btn-outline-secondary" type="button" width="16" height="16">-</button>
-                <div class = "quantity-input">
-                    <input type="text" id="quantity" name="quantity" class="form-control" value ="1" min="1" max="100" style="max-width:50px">
-                </div>
-            <button class="quantity-right-plus btn btn-outline-secondary" type="button" width="16" height="16">+</button>
-            </div>
+          <div class="input-group">
+                                               
+            <button class="quantity-left-minus btn btn-outline-secondary" type="button" width="16" height="16" onclick="minus(this)">-</button>
+        
+        <div class = "quantity-input">
+            <input type="text" id="quantity" class="form-control" value ="1" min="1" max="100" style="max-width:50px">
+        </div>
+        
+          <button class="quantity-right-plus btn btn-outline-secondary" type="button" width="16" height="16" onclick="plus(this)">+</button>                    </div>
+
         
             <br><button type="button" onclick="popFunction()" class="btn btn-outline-danger">Delete</button>
             <script>
@@ -155,9 +170,9 @@
       </div>
     </div>
   </div>
-  <br><button type="button" onclick="popFunction()" class="btn btn-danger btn-block">Delete List</button>
+  <br><button type="button" onclick="Function()" class="btn btn-danger btn-block">Delete List</button>
   <script>
-    function popFunction(){
+    function Function(){
     confirm("Do you want to delete this list?")
     }
   </script>
@@ -172,15 +187,15 @@
   </div>
 
   <!--........................Office.........................-->
-  <button type="button" class="btn btn-secondary btn-lg btn-block font-weight-bold " data-bs-toggle="modal" data-bs-target="#exampleModal">
+  <button type="button" class="btn btn-secondary btn-lg btn-block font-weight-bold " data-bs-toggle="modal" data-bs-target="#Modal">
     Office
   </button>
   <!-- Modal -->
-  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal fade" id="Modal" tabindex="-1" aria-labelledby="ModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered">
       <div class="modal-content">
         <div class="modal-header">
-          <h5 class="modal-title" id="exampleModalLabel">Office</h5>
+          <h5 class="modal-title" id="ModalLabel">Office</h5>
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
         <div class="modal-body">
@@ -193,14 +208,16 @@
                 <div class="card-body">
                   <h2 class="card-title">Nestle Fat-Free Strawberry</h2>
                   <p class="card-text">RM1.85</p>
-                  <div class="input-group">                       
-                    <button class="quantity-left-minus btn btn-outline-secondary" type="button" width="16" height="16">-</button>
-                        <div class = "quantity-input">
-                            <input type="text" id="quantity" name="quantity" class="form-control" value ="1" min="1" max="100" style="max-width:50px">
-                        </div>
-                    <button class="quantity-right-plus btn btn-outline-secondary" type="button" width="16" height="16">+</button>
-                    </div>
+                  <div class="input-group">
+                                               
+                    <button class="quantity-left-minus btn btn-outline-secondary" type="button" width="16" height="16" onclick="minus(this)">-</button>
                 
+                <div class = "quantity-input">
+                    <input type="text" id="quantity" class="form-control" value ="1" min="1" max="100" style="max-width:50px">
+                </div>
+                
+                  <button class="quantity-right-plus btn btn-outline-secondary" type="button" width="16" height="16" onclick="plus(this)">+</button>                    </div>
+
                     <br><button type="button" onclick="popFunction()" class="btn btn-outline-danger">Delete</button>
                     <script>
                       function popFunction(){
@@ -221,13 +238,16 @@
                 <div class="card-body">
                   <h2 class="card-title">Magnum White Chocolate</h2>
                   <p class="card-text">RM15.60</p>
-                  <div class="input-group">                       
-                    <button class="quantity-left-minus btn btn-outline-secondary" type="button" width="16" height="16">-</button>
-                        <div class = "quantity-input">
-                            <input type="text" id="quantity" name="quantity" class="form-control" value ="1" min="1" max="100" style="max-width:50px">
-                        </div>
-                    <button class="quantity-right-plus btn btn-outline-secondary" type="button" width="16" height="16">+</button>
-                    </div>
+                  <div class="input-group">
+                                               
+                    <button class="quantity-left-minus btn btn-outline-secondary" type="button" width="16" height="16" onclick="minus(this)">-</button>
+                
+                <div class = "quantity-input">
+                    <input type="text" id="quantity" class="form-control" value ="1" min="1" max="100" style="max-width:50px">
+                </div>
+                
+                  <button class="quantity-right-plus btn btn-outline-secondary" type="button" width="16" height="16" onclick="plus(this)">+</button>                    </div>
+
                 
                     <br><button type="button" onclick="popFunction()" class="btn btn-outline-danger">Delete</button>
                     <script>
@@ -249,13 +269,15 @@
                 <div class="card-body">
                   <h2 class="card-title">Nescafe White Coffee</h2>
                   <p class="card-text">RM8.99</p>
-                    <div class="input-group">                       
-                    <button class="quantity-left-minus btn btn-outline-secondary" type="button" width="16" height="16">-</button>
-                        <div class = "quantity-input">
-                            <input type="text" id="quantity" name="quantity" class="form-control" value ="1" min="1" max="100" style="max-width:50px">
-                        </div>
-                    <button class="quantity-right-plus btn btn-outline-secondary" type="button" width="16" height="16">+</button>
-                    </div>
+                  <div class="input-group">
+                                               
+                    <button class="quantity-left-minus btn btn-outline-secondary" type="button" width="16" height="16" onclick="minus(this)">-</button>
+                
+                <div class = "quantity-input">
+                    <input type="text" id="quantity" class="form-control" value ="1" min="1" max="100" style="max-width:50px">
+                </div>
+                
+                  <button class="quantity-right-plus btn btn-outline-secondary" type="button" width="16" height="16" onclick="plus(this)">+</button>                    </div>
                 
                     <br><button type="button" onclick="popFunction()" class="btn btn-outline-danger">Delete</button> 
                     <script>
@@ -267,11 +289,11 @@
               </div>
             </div>
           </div>
-          <br><button type="button" onclick="popFunction()" class="btn btn-danger float-right">Delete List</button>
+          <br><button type="button" onclick="Function()" class="btn btn-danger btn-block">Delete List</button>
           
           
       <script>
-        function popFunction(){
+        function Function(){
         confirm("Do you want to delete this list?")
         }
       </script>
@@ -287,7 +309,7 @@
     </div>
     </div>
   </div>
-    <br><button type="button" onclick="popFunction()" class="btn btn-primary btn-lg btn-block">Add New List</button>
+    <br><button type="button" onclick="pop()" class="btn btn-primary btn-lg btn-block">Add New List</button>
     <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
       <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered">
         <div class="modal-content">
@@ -295,52 +317,47 @@
             <h5 class="modal-title" id="exampleModalLabel">New List</h5>
             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             <script>
-              function popFunction(){
+              function pop(){
                 var person = prompt("New List Name:");
               }
             </script>
           </div>
-</div><!--container-->
 </main>
 
 <div class="container-fluid pb-0 mb-0 justify-content-center text-light ">
-    <footer>
-        <div class="row my-1 justify-content-center py-5">
-            <div class="col-11">
-                <div class="row ">
-                    <div class="col-xl-8 col-md-4 col-sm-4 col-12 my-auto mx-auto a">
-                      <a href="index.html"> <img src="logo.jpg" alt="logo " width="250 " height="70 "></a>
-                    </div>
-                    <div class="col-xl-2 col-md-4 col-sm-4 col-12">
-                        <h6 class="mb-3 mb-lg-4 bold-text "><b>About Us</b></h6>
-                        <ul class="list-unstyled">
-                            <li>Our team</li>
-                            <li>What we do</li>
-                            <li>Portfolio</li>
-                        </ul>
-                    </div>
-                    <div class="col-xl-2 col-md-4 col-sm-4 col-12">
-                        <h6 class="mb-3 mb-lg-4 text-muted bold-text mt-sm-0 mt-5"><b>ADDRESS</b></h6>
-                        <p class="mb-1">Lot 10 Jalan Kuchai Lama</p>
-                        <p class="mb-1">53400</p>
-                        <p class="mb-1">Kuala Lumpur</p>
-                    </div>
-                </div>
-                <div class="row ">
-                    <div class="col-xl-8 col-md-4 col-sm-4 col-auto my-md-0 mt-5 order-sm-1 order-3 align-self-end">
-                        <p class="social text-muted mb-0 pb-0 bold-text"> <span class="mx-2"><i class="fa fa-facebook" aria-hidden="true"></i></span> <span class="mx-2"><i class="fa fa-linkedin-square" aria-hidden="true"></i></span> 
-                          <span class="mx-2"><i class="fa fa-twitter" aria-hidden="true"></i></span>                                                
-                          <span class="mx-2"><i class="fa fa-instagram" aria-hidden="true"></i></span> </p><small class="rights"><span>&#174;</span> Shoppinglah All Rights Reserved.</small>
-                    </div>
-                    <div class="col-xl-2 col-md-4 col-sm-4 col-auto order-1 align-self-end ">
-                        <h6 class="mt-55 mt-2 text-muted bold-text"><b>Contact Us</b></h6><small> <span><i class="fa fa-envelope" aria-hidden="true"></i></span> shoppinglah@gmail.com</small>
-                    </div>
+  <footer>
+      <div class="row my-1 justify-content-center py-5">
+          <div class="col-11">
+              <div class="row ">
+                  <div class="col-xl-8 col-md-4 col-sm-4 col-12 my-auto mx-auto a">
+                      <a href="index.html "> <img src="logo.jpg" alt="logo " width="250 " height="70 "></a>
+                      <!-- <h3 class="text-muted mb-md-0 mb-5 bold-text">Shoppinglah</h3> -->
+                  </div>
+                  <div class="col-xl-2 col-md-4 col-sm-4 col-12">
+                      <h6 class="mb-3 mb-lg-4 bold-text "><b>About Us</b></h6>
+                      <p style="padding-right: 30px;text-align: justify;text-justify: inter-word;"><strong>Shoppinglah</strong> helps to organise your shopping list easily. Create your own shopping list in a few clicks!</p>
+                  </div>
+                  <div class="col-xl-2 col-md-4 col-sm-4 col-12">
+                      <h6 class="mb-3 mb-lg-4 text-muted bold-text mt-sm-0 mt-5"><b>ADDRESS</b></h6>
+                      <p class="mb-1">Lot 10 Jalan Kuchai Lama</p>
+                      <p class="mb-1">53400</p>
+                      <p class="mb-1">Kuala Lumpur</p>
+                  </div>
+              </div>
+              <div class="row ">
+                  <div class="col-xl-8 col-md-4 col-sm-4 col-auto my-md-0 mt-5 order-sm-1 order-3 align-self-end">
+                      <p class="social text-muted mb-0 pb-0 bold-text"> <span class="mx-2"><i class="fa fa-facebook" aria-hidden="true"></i></span> <span class="mx-2"><i class="fa fa-linkedin-square" aria-hidden="true"></i></span> <span class="mx-2"><i class="fa fa-twitter" aria-hidden="true"></i></span>                                                <span class="mx-2"><i class="fa fa-instagram" aria-hidden="true"></i></span> </p><small class="rights"><span>&#174;</span> Shoppinglah All Rights Reserved.</small>
+                  </div>
+                  <div class="col-xl-2 col-md-4 col-sm-4 col-auto order-1 align-self-end ">
+                      <h6 class="mt-55 mt-2 text-muted bold-text"><b>Contact Us</b></h6><small> <span><i class="fa fa-envelope" aria-hidden="true"></i></span> shoppinglah@gmail.com</small>
+                  </div>
 
-                </div>
-            </div>
-        </div>
-    </footer>
+              </div>
+          </div>
+      </div>
+    </div><!--container-->
+  </footer>
 </div>
-
 </body>
 </html>
+
