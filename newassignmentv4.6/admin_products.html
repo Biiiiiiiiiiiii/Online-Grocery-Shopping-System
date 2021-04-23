@@ -17,7 +17,8 @@
                     var price = localStorage.getItem("price");
                     //var picture = localStorage.getItem("imgData");
                     //not using this for now, got bug
-                
+                    
+                    card.data = (""+name+" "+description);
                     card.querySelector("#Product_sub_category").value = name;
                     card.querySelector("#Product_name").value = description;
                     card.querySelector("#price").value = price;
