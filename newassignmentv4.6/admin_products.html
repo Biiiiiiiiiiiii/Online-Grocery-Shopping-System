@@ -11,7 +11,10 @@
             function init(){
                 card = document.getElementById("idnewCard");
                 var category = localStorage.getItem("category");
-                
+                var total = document.getElementById(category);
+                    var val = parseInt(total.innerHTML);
+                    val=val+1;
+                    total.innerHTML=val;
                     var name = localStorage.getItem("name");
                     var description = localStorage.getItem("description");
                     var price = localStorage.getItem("price");
