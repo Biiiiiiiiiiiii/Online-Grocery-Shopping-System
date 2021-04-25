@@ -25,14 +25,14 @@
 </header>
 <div class="container">
   <nav class="navbar navbar-expand-md navbar-dark fixed-top " style="background-color: #eacefe; ">
-    <a href="index.html"> <img src="logo.jpg " alt="logo " width="150 " height="40 "></a>
+    <a href="home_login.html"> <img src="logo.jpg " alt="logo " width="150 " height="40 "></a>
     <button class="navbar-toggler " type="button " data-toggle="collapse " data-target="#navbarCollapse " aria-controls="navbarCollapse " aria-expanded="false " aria-label="Toggle navigation ">
 <span class="navbar-toggler-icon "></span>
     </button>
                 <div class="collapse navbar-collapse " id="navbarCollapse ">
                     <ul class="navbar-nav mr-auto ">
                         <li class="nav-item ">
-                            <a class="nav-link " style="color: #541191; " href="index.html">Home</a>
+                            <a class="nav-link " style="color: #541191; " href="home_login.html">Home</a>
                         </li>
                             <li class="nav-item dropdown ">
                         <div class="btn-group">
@@ -67,7 +67,7 @@
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js" integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous"></script>  
 
 <!--........................House...........................-->
-<button type="button" class="btn btn-secondary btn-lg btn-block font-weight-bold pt-1" data-bs-toggle="modal" data-bs-target="#exampleModal">
+<button id="house" type="button" class="btn btn-secondary btn-lg btn-block font-weight-bold pt-1" data-bs-toggle="modal" data-bs-target="#exampleModal">
   House
 </button>
 
@@ -79,10 +79,10 @@
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
-  <div class="card mb-10" style="max-width: 8000px;">
+  <div id="coffee" class="card mb-10" style="max-width: 8000px;">
     <div class="row no-gutters">
       <div class="col-md-3">
-        <img class="card-img-top" id="coffee" src="coffee.png" alt="coffee" style="padding: 20px;height: 50 ;width: 50;">
+        <img class="card-img-top"  src="products/drinks/coffee.png" alt="coffee" style="padding: 20px;height: 50 ;width: 50;">
       </div>
       <div class="col-md-8">
         <div class="card-body">
@@ -99,16 +99,16 @@
           <button class="quantity-right-plus btn btn-outline-secondary" type="button" width="16" height="16" onclick="plus(this)">+</button>                    </div>
 
         
-            <br><button type="button" onclick="popFunction()" class="btn btn-outline-danger">Delete</button>
+            <br><button type="button" onclick="popFunction('coffee')" class="btn btn-outline-danger">Delete</button>
             
         </div>
       </div>
     </div>
   </div>
-  <div class="card mb-10" style="max-width: 8000px;">
+  <div id="milk" class="card mb-10" style="max-width: 8000px;">
     <div class="row no-gutters">
       <div class="col-md-3">
-        <img class="card-img-top" id="milk" src="milk.png" alt="milk" style="padding: 20px;height: 150 ;width: 150;">
+        <img class="card-img-top"  src="products/drinks/milk.png" alt="milk" style="padding: 20px;height: 150 ;width: 150;">
       </div>
       <div class="col-md-8">
         <div class="card-body">
@@ -125,17 +125,17 @@
           <button class="quantity-right-plus btn btn-outline-secondary" type="button" width="16" height="16" onclick="plus(this)">+</button>                    </div>
 
         
-            <br><button type="button" onclick="popFunction()" class="btn btn-outline-danger">Delete</button>
+            <br><button type="button" onclick="popFunction('milk')" class="btn btn-outline-danger">Delete</button>
             
         </div>
       </div>
     </div>
   </div>
   
-  <div class="card mb-10" style="max-width: 8000px;">
+  <div id="tea" class="card mb-10" style="max-width: 8000px;">
     <div class="row no-gutters">
       <div class="col-md-3">
-        <img class="card-img-top" id="tea" src="tea.png" alt="tea" style="padding: 20px;height: 60 ;width: 60;">
+        <img class="card-img-top"  src="products/drinks/tea.png" alt="tea" style="padding: 20px;height: 60 ;width: 60;">
       </div>
       <div class="col-md-8">
         <div class="card-body">
@@ -152,13 +152,13 @@
           <button class="quantity-right-plus btn btn-outline-secondary" type="button" width="16" height="16" onclick="plus(this)">+</button>                    </div>
 
         
-            <br><button type="button" onclick="popFunction()" class="btn btn-outline-danger">Delete</button>
+            <br><button type="button" onclick="popFunction('tea')" class="btn btn-outline-danger">Delete</button>
             
         </div>
       </div>
     </div>
   </div>
-  <br><button type="button" onclick="Function()" class="btn btn-danger btn-block">Delete List</button>
+  <br><button type="button" onclick="Function('house')" class="btn btn-danger btn-block">Delete List</button>
 </ul> 
 </div>
       </div>
@@ -170,7 +170,7 @@
   </div>
 
   <!--........................Office.........................-->
-  <button type="button" class="btn btn-secondary btn-lg btn-block font-weight-bold " data-bs-toggle="modal" data-bs-target="#Modal">
+  <button type="button" id="office" class="btn btn-secondary btn-lg btn-block font-weight-bold " data-bs-toggle="modal" data-bs-target="#Modal">
     Office
   </button>
   <!-- Modal -->
@@ -182,10 +182,10 @@
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
         <div class="modal-body">
-          <div class="card mb-10" style="max-width: 8000px;">
+          <div id="yoghurt" class="card mb-10" style="max-width: 8000px;">
             <div class="row no-gutters">
               <div class="col-md-3">
-                <img class="card-img-top" id="yoghurt" src="yoghurt.png" alt="yoghurt" style="padding: 20px;height: 100 ;width: 100;">
+                <img class="card-img-top"  src="products/frozen/yoghurt.png" alt="yoghurt" style="padding: 20px;height: 100 ;width: 100;">
               </div>
               <div class="col-md-8">
                 <div class="card-body">
@@ -201,17 +201,17 @@
                 
                   <button class="quantity-right-plus btn btn-outline-secondary" type="button" width="16" height="16" onclick="plus(this)">+</button>                    
                 </div>
-                    <br><button type="button" onclick="popFunction()" class="btn btn-outline-danger">Delete</button>
+                    <br><button type="button" onclick="popFunction('yoghurt')" class="btn btn-outline-danger">Delete</button>
                     
                 </div>
               </div>
             </div>
           </div>
           
-          <div class="card mb-10" style="max-width: 8000px;">
+          <div id="ice_cream" class="card mb-10" style="max-width: 8000px;">
             <div class="row no-gutters">
               <div class="col-md-3">
-                <img class="card-img-top" id="ice cream" src="ice cream.png" alt="ice cream" style="padding: 20px;height: 50 ;width: 50;">
+                <img class="card-img-top"  src="products/frozen/ice cream.png" alt="ice cream" style="padding: 20px;height: 50 ;width: 50;">
               </div>
               <div class="col-md-8">
                 <div class="card-body">
@@ -227,22 +227,22 @@
                 
                   <button class="quantity-right-plus btn btn-outline-secondary" type="button" width="16" height="16" onclick="plus(this)">+</button>                    
                 </div>
-                    <br><button type="button" onclick="popFunction()" class="btn btn-outline-danger">Delete</button>
+                    <br><button type="button" onclick="popFunction('ice_cream')" class="btn btn-outline-danger">Delete</button>
                     
                 </div>
               </div>
             </div>
           </div>
 
-          <div class="card mb-10" style="max-width: 8000px;">
+          <div id="apples" class="card mb-10" style="max-width: 8000px;">
             <div class="row no-gutters">
               <div class="col-md-3">
-                <img class="card-img-top" id="coffee" src="coffee.png" alt="coffee" style="padding: 20px;height: 100 ;width: 100;">
+                <img class="card-img-top" src="products/fresh/apples.jpg" alt="coffee" style="padding: 20px;height: 100 ;width: 100;">
               </div>
               <div class="col-md-8">
                 <div class="card-body">
-                  <h2 class="card-title">Nescafe White Coffee</h2>
-                  <p class="card-text">RM8.99</p>
+                  <h2 class="card-title">Apples</h2>
+                  <p class="card-text">RM2.00</p>
                   <div class="input-group">
                                                
                     <button class="quantity-left-minus btn btn-outline-secondary" type="button" width="16" height="16" onclick="minus(this)">-</button>               
@@ -251,13 +251,13 @@
                 </div>                
                   <button class="quantity-right-plus btn btn-outline-secondary" type="button" width="16" height="16" onclick="plus(this)">+</button>                    
                 </div>
-                    <br><button type="button" onclick="popFunction()" class="btn btn-outline-danger">Delete</button>                     
+                    <br><button type="button" onclick="popFunction('apples')" class="btn btn-outline-danger">Delete</button>                     
                     </script>           
                 </div>
               </div>
             </div>
           </div>
-          <br><button type="button" id="delete list" value="Remove All" onclick="Function()" class="btn btn-danger btn-block">Delete List</button>
+          <br><button type="button" id="delete list" value="Remove All" onclick="Function('office')" class="btn btn-danger btn-block">Delete List</button>
         </ul>
     </div>
     </div>
@@ -277,10 +277,19 @@
             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             <script>
               function pop(){
-                var person = prompt("New List Name:");
+                var newList = prompt("New List Name:");
+                var el=document.createElement("button");
+                el.id=newList;
+                el.className="btn btn-secondary btn-lg btn-block font-weight-bold";
+                el.innerHTML=newList;
+                var office = document.getElementById('office');
+                insertAfter(office,el);
+              }
+              function insertAfter(referenceNode,newNode){
+                referenceNode.parentNode.insertBefore(newNode,referenceNode.nextSibling);
               }
             </script>
-          </div>
+          </div></div></div></div></div>
 </main>
 
 <div class="container-fluid pb-0 mb-0 justify-content-center text-light ">
@@ -322,21 +331,16 @@
 
   function Function(_id){
   if(confirm("Are you sure to delete this list?")){
-    var product="id"+_id;
-    document.getElementById(product).display='none';
+    document.getElementById(_id).style.display='none';
   }
   }
 
   function popFunction(_id){
     if(confirm("Are you sure to delete this item?")){
-      var product_id="id"+_id;
-      document.getElementById(product_id).display='none';
+      document.getElementById(_id).style.display='none';
     }
 }
 
 </script>
 </body>
 </html>
-
-
-
