@@ -1,79 +1,79 @@
 * {
-    box-sizing: border-box;
-    }
-  
-  /* Full-width input box */
-  
-    input[type=text], input[type=password],input[type=file] {
-    width: 50%;
-    padding: 10px;
-    margin: 5px 0 5px 0;
-    display: block ;
-    border: plum;
-    background: #e7e4eb;
+  box-sizing: border-box;
   }
-  /*background colour of the input box*/
-  input[type=text]:focus, input[type=password]:focus {
-    background-color: rgb(189, 154, 235);
-    outline: none;
-  }
-  /*line*/
-  hr {
-    border: 4px solid #541191;
-    margin-bottom: 15px;
-  }
-  
-  /* Set a style for sign up and cancel buttons */
-  button {
-    background-color: #541191;
-    color: white;
-    padding: 10px 15px;
-    margin: 10px 0;
-    border: none;
-    cursor: pointer;
-    width: 70%;
-    opacity: 10;
-  }
-  button:hover {
-    opacity:0.5;
-  }
-  .cancelbutton {
-    padding: 10px 15px;
-    background-color: #dc3545;
-  }
-  .signupbutton, .cancelbutton {
-    float: inline-start;
-    width:35%;
-  }
-  
-  /* Add padding to container elements */
-  .container {
-    padding-left: 250px;
-    padding-top: 150px;
-  }
-  
-  /* Clear floats */
-  .submit::after {
-    content: "";
-    clear: both;
-    display: table;
-  }
-  
-  /* Change styles for cancel button and signup button on extra small screens 
-  @media screen and (max-width: 400px) {
-    .cancelbutton, .signupbutton {
-      width: 100%;
-    }
-  }*/
 
-  .container-fluid {
-    overflow: hidden;
-    margin-top: 250px;
-    background: #eacefe;
-    color: #541191 !important;
-    margin-bottom: 0;
-    padding-bottom: 0
+/* Full-width input box */
+
+  input[type=text], input[type=email], input[type=password],input[type=file] {
+  width: 50%;
+  padding: 10px;
+  margin: 5px 0 5px 0;
+  display: block ;
+  border: plum;
+  background: #e7e4eb;
+}
+/*background colour of the input box*/
+input[type=text]:focus, input[type=password]:focus, input[type=email]:focus {
+  background-color: rgb(189, 154, 235);
+  outline: none;
+}
+/*line*/
+hr {
+  border: 4px solid #541191;
+  margin-bottom: 15px;
+}
+
+/* Set a style for sign up and cancel buttons */
+button {
+  background-color: #541191;
+  color: white;
+  padding: 10px 15px;
+  margin: 10px 0;
+  border: none;
+  cursor: pointer;
+  width: 70%;
+  opacity: 10;
+}
+button:hover {
+  opacity:0.5;
+}
+.cancelbutton {
+  padding: 10px 15px;
+  background-color: #dc3545;
+}
+.signupbutton, .cancelbutton {
+  float: inline-start;
+  width:35%;
+}
+
+/* Add padding to container elements */
+.container {
+  padding-left: 250px;
+  padding-top: 150px;
+}
+
+/* Clear floats */
+.submit::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+/* Change styles for cancel button and signup button on extra small screens 
+@media screen and (max-width: 400px) {
+  .cancelbutton, .signupbutton {
+    width: 100%;
   }
-  .bold-text {
-    color: #541191 !important
-  }
+}*/
+
+.container-fluid {
+  overflow: hidden;
+  margin-top: 250px;
+  background: #eacefe;
+  color: #541191 !important;
+  margin-bottom: 0;
+  padding-bottom: 0
+}
+.bold-text {
+  color: #541191 !important
+}
