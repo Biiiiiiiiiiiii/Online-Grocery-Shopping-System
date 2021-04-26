@@ -31,7 +31,7 @@
                         <div class="collapse navbar-collapse " id="navbarCollapse ">
                             <ul class="navbar-nav mr-auto ">
                                 <li class="nav-item ">
-                                    <a class="nav-link " style="color: #541191; " href="index.html">Home</a>
+                                    <a class="nav-link " style="color: #541191; " href="home_login.html">Home</a>
                                 </li>
                                 <li class="nav-item dropdown ">
                                 <div class="btn-group">
@@ -51,7 +51,7 @@
                                     <a class="nav-link " style="color: #541191; " href="shoppinglist.html">My Shopping List</a>
                                 </li>
                                 <li class="nav-item ">
-                                    <a class="nav-link " style="color: #541191; " href="# ">History</a>
+                                    <a class="nav-link " style="color: #541191; " href="history.html">History</a>
                                 </li>
                             </ul>
                             <ul class="nav ">
@@ -161,7 +161,7 @@
                              <img class="card-img-top" src="products/dry/miaow green pea.jpg" style="padding: 20px;height: 250px ;width: 250px;">
                                 <div class="card-body">
                                     <h5 class="font-weight-bold pt-1">Snacks</h5>
-                                    <div class="text-muted description">Miaow Miaow Green Pea 60g</div>
+                                    <div class="text-muted description">Miaow Miaow Green Pea</div>
                                         <div class="h6 font-weight-bold">RM 2.50</div>
                                         <div class="input-group">
                                             
@@ -190,15 +190,24 @@
         <div id="listModal" class="modal">
             <div class="modal-content">
                 <div class = "modal-header">
+                    <div class ="modal-title">Please select a shopping list:</div>
                     <span class = "close" onclick = "closeModal()">&times;</span>
                 </div>
                 <div class = "modal-body">
                     <ul>
-                        <li class="list-group-item list-group-item-action d-flex justify-content-between align-items-center category" onclick="alert('Item added to House list')"> House</li>
-                        <li class="list-group-item list-group-item-action d-flex justify-content-between align-items-center category" onclick="alert('Item added to Office list')"> Office</li>
+                        <li class="House list-group-item list-group-item-action d-flex justify-content-between align-items-center category" onclick="addToList('House')"> House</li>
+                        <li class="Office list-group-item list-group-item-action d-flex justify-content-between align-items-center category" onclick="addToList('Office')"> Office</li>
                     </ul>
                 </div>
             </div>
+            <script type="text/javascript">
+                function addToList(id){
+                    var str=("Item added to "+id+" list");
+                    alert(str);
+                    closeModal();
+                    
+                }
+            </script>
         </div>
         <div class="container-fluid pb-0 mb-0 justify-content-center text-light ">
             <footer>
