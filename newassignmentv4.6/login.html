@@ -27,8 +27,15 @@
       <input type="text" placeholder="Enter your username or email address" id="LoginUser" required/><br>
   
       <label for="password"><b>Password</b></label>
-      <input type="password" placeholder="Enter your Password" id="password" required/><a href="forgetpassword.html" style="color:rgb(194, 77, 230);font-family: sans-serif">forget password?</a><br>
-  
+      <input type="password" placeholder="Enter your Password" id="password" required/><a href="forgetpassword.html" style="color:rgb(194, 77, 230);font-family: sans-serif">Forget password?</a><br>
+      <label for="role"><b>Login as:</b></label>
+      
+        <select name="Role" id="role" placeholder="Role">
+            <option value="select">Select</option>
+            <option value="admin">Admin</option>
+            <option value="customer">Customer</option>
+        </select>
+    <br>
         <input type="checkbox" checked="checked" name="remember" style="margin-bottom:15px"> Remember me<br>
       
           <button type="submit" id="loginbutton" class="loginbutton">Login</button>
@@ -37,16 +44,7 @@
 
         <p>Don't have an existing account? <a href="signup.html" style="color:rgb(223, 35, 182);font-family: sans-serif;">Sign up</a> now !</p>
         
-        <div class="popup" id="popup1">
-            <div class="backgroundofcontent"></div>
-            <div class="content">
-                <div class="closebutton" onclick="togglePopup()">&times;</div>
-                <h2 style="color:rgb(43, 96, 209); font-family: monospace;">Login as Admin or User</h2>
-                <button type="button" id="aubtn" class="adminbutton"onclick="document.location='home_admin.html'">Admin</button>
-                <button type="button" id="aubtn" class="userbutton"onclick="document.location='home_login.html'">User</button>
-            </div>
-            </div>
-        </div>
+        
   </form>
     </div> 
     </div>  
@@ -87,9 +85,7 @@
         </div>
     </footer>
     <script type="text/javascript">
-        function togglePopup(){
-            document.getElementById("popup1").classList.toggle("active");
-        }
+        
            function validate() {
             var loginuser = document.getElementById('LoginUser').value;
             //a = loginuser.indexOf("@");
@@ -109,8 +105,22 @@
          
          function login(){
            if (validate()){
-             alert("Login successfully!");
-             togglePopup();
+             
+             var e = document.getElementById("role");
+                var role = e.options[e.selectedIndex].value;
+                if(role=="select"){
+                    alert("Please select your identity!")
+                    validate()=false;
+                }
+                else if(role==("admin")){
+                    document.location="home_admin.html";
+                    alert("Login successfully!");
+                }
+                else if(role==("customer")){
+                    document.location="home_login.html";
+                    alert("Login successfully!");
+                }
+                
           }
            else{
                alert("Please enter your information according to your registered account!");
