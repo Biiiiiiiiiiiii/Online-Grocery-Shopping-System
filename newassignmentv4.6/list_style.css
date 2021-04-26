@@ -54,8 +54,8 @@ body {
  
 .btn-success {
     color: #fff;
-    background-color: #28a745;
-    border-color: #28a745;
+    background-color: #541191;
+    border-color:  #541191;
   }
   
 .btn-secondary {
@@ -69,3 +69,8 @@ body {
     background-color: #dc3545;
     border-color: #dc3545;
   }  
+
+  .modal-header{
+    background-color: #df23b6;
+    color: #fff;
+  }
