@@ -12,17 +12,7 @@
 </head>
 
 <body>
-<header> 
-<div class="d-flex bd-highlight mb-3">
-      <div class="p-2 bd-highlight">
-            <form class="form col-12 col-lg-auto mb-3 mb-lg-0 ">
-                <input type="search " class="form-control " placeholder="Search... "></form>
-        </div>
-        <div class="ml-auto p-2 bd-highlight">
-            <button class="navbar-toggler " type="button " data-toggle="collapse " data-target="#navbarCollapse " aria-controls="navbarCollapse " aria-expanded="false " aria-label="Toggle navigation "></div>
-        </div>
-</div>
-</header>
+
 <div class="container">
   <nav class="navbar navbar-expand-md navbar-dark fixed-top " style="background-color: #eacefe; ">
     <a href="home_login.html"> <img src="logo.jpg " alt="logo " width="150 " height="40 "></a>
@@ -161,13 +151,13 @@
   <br><button type="button" onclick="Function('house')" class="btn btn-danger btn-block">Delete List</button>
 </ul> 
 </div>
-      </div>
+      
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary btn-danger" data-bs-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary btn-success">Save changes</button>
+        <button type="button" class="btn btn-primary btn-success" onclick="alert('Changes have been saved.')" data-bs-dismiss="modal">Save changes</button>
       </div>
     </div>
-  </div>
+  </div></div>
 
   <!--........................Office.........................-->
   <button type="button" id="office" class="btn btn-secondary btn-lg btn-block font-weight-bold " data-bs-toggle="modal" data-bs-target="#Modal">
@@ -260,11 +250,10 @@
           <br><button type="button" id="delete list" value="Remove All" onclick="Function('office')" class="btn btn-danger btn-block">Delete List</button>
         </ul>
     </div>
-    </div>
     <div class="modal-footer">
 
       <button type="button" class="btn btn-secondary btn-danger" data-bs-dismiss="modal">Close</button>
-      <button type="button" class="btn btn-primary btn-success">Save changes</button>
+      <button type="button" class="btn btn-primary btn-success" onclick="alert('Changes have been saved.')" data-bs-dismiss="modal">Save changes</button>
     </div>
     </div>
   </div>
@@ -289,7 +278,7 @@
                 referenceNode.parentNode.insertBefore(newNode,referenceNode.nextSibling);
               }
             </script>
-          </div></div></div></div></div>
+          </div></div></div></div></div></div>
 </main>
 
 <div class="container-fluid pb-0 mb-0 justify-content-center text-light ">
