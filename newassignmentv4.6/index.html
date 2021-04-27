@@ -44,17 +44,21 @@
                     </div>
                 </li>
                 <li class="nav-item ">
-                    <a class="nav-link " style="color: #541191; " href="shoppinglist.html">My Shopping List</a>
+                    <a class="nav-link " style="color: #541191; " onclick="popUp()" href="login.html">My Shopping List</a>
                 </li>
                 <li class="nav-item ">
-                    <a class="nav-link " style="color: #541191; " href="history.html">History</a>
+                    <a class="nav-link " style="color: #541191; " onclick="popUp()" href="login.html">History</a>
                 </li>
             </ul>
             <ul class="nav ">
                 <li class="nav-item "><a href="login.html" class="nav-link px-2 " style="color: #541191; ">Login</a></li>
                 <li class="nav-item "><a href="signup.html" class="nav-link px-2 " style="color: #541191; ">Sign up</a></li>
             </ul>
-
+            <script>
+                function popUp(){
+                    alert("Please login to access this feature!");
+                }
+            </script>
         </div>
     </nav>
 
