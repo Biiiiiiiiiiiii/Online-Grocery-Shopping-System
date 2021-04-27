@@ -45,3 +45,7 @@ function openModal(){
 function closeModal(){
     document.getElementById("listModal").style.display = "none";
 }
+
+function popUp(){
+    alert("Please login to access this feature!");
+}
