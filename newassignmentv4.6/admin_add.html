@@ -28,6 +28,17 @@
 
 <body>
 <!-- content goes in the body - contains text and elements that display in the web page document -->
+
+<header> 
+<!-- Contains the web page document’s headings  -->
+<div class="d-flex bd-highlight mb-3">
+      <div class="p-2 bd-highlight">
+            <form class="form col-12 col-lg-auto mb-3 mb-lg-0 ">
+                <input type="search " class="form-control " placeholder="Search... "></form>
+        </div>
+</div>
+</header>
+
 <nav class="navbar navbar-expand-md navbar-dark fixed-top " style="background-color: #eacefe; ">
     <a href="home_admin.html"> <img src="logo.jpg " alt="logo " width="150 " height="40 "></a>
     <button class="navbar-toggler " type="button " data-toggle="collapse " data-target="#navbarCollapse " aria-controls="navbarCollapse " aria-expanded="false " aria-label="Toggle navigation ">
@@ -75,14 +86,14 @@
         <form target="_blank" onsubmit="toSubmit();">
         <div class="form-row">
         <div class="form-group col-md-8">
-        <input class="form-control" id="sub-category" placeholder="Sub-category" type="text" required>
+        <input class="form-control" id="name" placeholder="Sub-category" type="text" required>
     </div></div></div>
         <hr>
     <div class="col-sm-3"><h6 class="mb-0">Product Name</h6></div>
     <div class="col-sm-9 text-secondary"> 
     <div class="form-row">
     <div class="form-group col-md-8">
-    <input class="form-control" id="name" placeholder="Name" type="text" required>
+    <input class="form-control" id="description" placeholder="Name" type="text" required>
     </div></div></div>
     <hr>
     <div class="col-sm-3"><h6 class="mb-0">Product Price</h6></div>
