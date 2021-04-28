@@ -273,7 +273,11 @@
                 el.className="btn btn-secondary btn-lg btn-block font-weight-bold";
                 el.innerHTML=newList;
                 var office = document.getElementById('office');
-                insertAfter(office,el);
+                if (newList == null || newList == ""){
+                }
+                else {
+                  insertAfter(office,el);
+                }
               }
               function insertAfter(referenceNode,newNode){
                 referenceNode.parentNode.insertBefore(newNode,referenceNode.nextSibling);
