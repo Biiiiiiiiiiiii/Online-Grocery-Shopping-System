@@ -77,6 +77,13 @@ include("config.php");
     </nav>
 
     <div class="wrapper">
+    <?php
+        $submit=isset($_GET['submit']) ? $_GET['submit'] : NULL;
+        if($submit=="Add"){
+            echo "<div class='alert alert-success' role='alert'> Product added to shopping list.  
+            <strong><a href='shoppinglist.html' class='alert-link'>View shopping list</a></strong></div>";
+        }
+        ?>
         <div class="h1">Drinks</div>
         <section id="sidebar" style="margin-right: 20px;">
             <div class="py-3">
@@ -169,7 +176,7 @@ include("config.php");
 
                             </div>
                             <div id="listModal" class="modal">
-                                <form id="add" action="" method="GET" onsubmit="alert('Product is added to shopping list.')">
+                                <form id="add" action="" method="GET">
                                     <div class="modal-content">
                                         <div class="modal-header">
                                             <div class="modal-title">Please select a shopping list:</div>
