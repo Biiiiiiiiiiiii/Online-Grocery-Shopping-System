@@ -10,7 +10,6 @@
     <link rel="stylesheet" href="style.css">
     <title>Add new product</title>
 </head>
-
 <body>
     <!-- content goes in the body - contains text and elements that display in the web page document -->
     <nav class="navbar navbar-expand-md navbar-dark fixed-top " style="background-color: #eacefe; ">
@@ -45,7 +44,6 @@
             </ul>
         </div>
     </nav>
-
     <main>
         <!-- Contains the web page document’s main content  -->
         <div class="container">
@@ -53,7 +51,6 @@
                 <h4 class="text-center">Add New Product</h4>
             </div>
             <div class="row">
-
                 <div class="col-md-7">
                     <div class="card mb-3">
                         <div class="card-body">
@@ -105,10 +102,10 @@
                                         <div class="form-group col-md-8">
                                             <select class="form-control" name="Category" id="category" placeholder="Category">
                                                 <option value="select">Select category</option>
-                                                <option value="drinks">Drinks</option>
-                                                <option value="dry">Dry food</option>
-                                                <option value="fresh">Fresh Food</option>
-                                                <option value="frozen">Frozen Food</option>
+                                                <option value="Drinks">Drinks</option>
+                                                <option value="Dry food">Dry food</option>
+                                                <option value="Fresh food">Fresh Food</option>
+                                                <option value="Frozen food">Frozen Food</option>
                                             </select>
                                         </div>
                                     </div>
@@ -133,17 +130,14 @@
                             </div>
                         </div>
                     </div>
-
                     <div class="container text-center"><input class="add-product btn btn-dark btn-lg" id="add" type="submit" name="add" value="Add">
                     </div>
                     </form>
                 </div>
             </div>
-
             </form>
         </div>
     </main>
-
     <div class="container-fluid pb-0 mb-0 justify-content-center text-light ">
         <footer>
             <div class="row my-1 justify-content-center py-5">
@@ -171,25 +165,21 @@
                         <div class="col-xl-2 col-md-4 col-sm-4 col-auto order-1 align-self-end ">
                             <h6 class="mt-55 mt-2 text-muted bold-text"><b>Contact Us</b></h6><small> <span><i class="fa fa-envelope" aria-hidden="true"></i></span> shoppinglah@gmail.com</small>
                         </div>
-
                     </div>
                 </div>
             </div>
         </footer>
     </div>
-
     <!-- Include every Bootstrap JavaScript plugin -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script>
     <script type="text/javascript" src="productscript.js"></script>
-
     <script>
         var loadFile = function(event) {
             var image = document.getElementById('picture');
             image.src = URL.createObjectURL(event.target.files[0]);
             imgData = getBase64Image(image);
             localStorage.setItem("imgData", imageData);
-
             function getBase64Image(img) {
                 var canvas = document.createElement("canvas");
                 canvas.width = img.width;
@@ -201,7 +191,5 @@
             }
         };
     </script>
-
 </body>
-
 </html>
