@@ -189,7 +189,7 @@ include("config.php");
 
                                                 <?php
                         while($res=mysqli_fetch_array($list)){
-                            echo '<label><input type="radio" name="selectedList" value="'.$res['ListID'].'"> '.$res['ListName'].' </label>';
+                            echo '<label><input type="radio" name="selectedList" value="'.$res['ListID'].'"> '.$res['ListName'].' </label> </br>';
                         }
                         ?>
                                                 <br>
