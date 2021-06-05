@@ -109,8 +109,7 @@ if(isset($_POST['current']) && isset($_POST['new']) && isset($_POST['confirm']))
     elseif(!$samepw2) {
         echo "<font color='red'>Passwords did not match! Try again.</font><br>";}
     }else{
-        $hashedpw = sha1($new);	
-        $sql2 = "UPDATE users SET password='$hashedpw' WHERE userid='$id'";
+        $sql2 = "UPDATE users SET password='$new' WHERE userid='$id'";
         $result2= $mysqli->query($sql2);
         echo "<h5 style='text align:centre;color:slateblue'>Your new password have been saved.</h5>";
     }
