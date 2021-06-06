@@ -5,32 +5,30 @@
   if (isset($_SESSION['logged_in']) && $_SESSION['user_id'] && $_SESSION['user_email'] && $_SESSION['logged_in']==true ){
     $id = $_SESSION['user_id'];
 
-    //update profile
+   //update profile name email
     if(isset($_POST['update'])){
       $name=$_POST['name'];
       $email=$_POST['email'];
-      //$file = $_FILES['image']['name'];
-    if(isset($name)){
-      $chgtxt = mysqli_query($mysqli, "UPDATE users SET name='$name' WHERE userid='$id'");
+      
+      if(isset($name) && isset($email)){
+        $chgtxt = mysqli_query($mysqli, "UPDATE users SET name='$name', email='$email' WHERE userid='$id'");
+      }
+
+      header("Location:profile.php?action=update_success");
     }
-    elseif(isset($email)){
-      $chgtxt = mysqli_query($mysqli, "UPDATE users SET email='$email' WHERE userid='$id'");
-    }
-    elseif(isset($name) && isset($email)){
-      $chgtxt = mysqli_query($mysqli, "UPDATE users SET name='$name', email='$email' WHERE userid='$id'");
-    }
-    elseif(isset($_FILES['image']['tmp_name'])){
+    
+//upload photo
+  if(isset($_POST['upload'])){
+    if(isset($_FILES['image']['tmp_name'])){
       $img=addslashes (file_get_contents($_FILES['image']['tmp_name']));
       $chgpic = mysqli_query($mysqli, "UPDATE users SET pic='$img' WHERE userid='$id'");
+      header("Location:profile.php?action=upload_success");
     }
-    elseif(isset($_FILES['image']['tmp_name']) && isset($name) && isset($email)){
-      $img=addslashes (file_get_contents($_FILES['image']['tmp_name']));
-      $chgpictxt = mysqli_query($mysqli, "UPDATE users SET name='$name', email='$email' pic='$img' WHERE userid='$id'");
-    } 
- 
-    echo "<h5 style='text align:centre;color:slateblue;padding-left: 0.6em;'>Your profile have been updated.</h5>";
-    header("Location:profile.php?action=login_success");
+    else{
+      echo "<script>alert('Please select a image')</script>";
+    }
   }
+    
   //delete account
   if(isset($_POST['delete'])){
   
@@ -118,10 +116,12 @@
 <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="POST" enctype="multipart/form-data">
 
 <?php
-//if update success
+//if update success or upload photo success
 $action = isset($_GET['action']) ? $_GET['action'] : "";
-if($action=='login_success'){
+if($action=='update_success'){
   echo "<h5 style='text align:centre;color:slateblue;padding-left: 0.6em;'>Your profile have been updated.</h5>";
+}elseif($action=='upload_success'){
+  echo "<h5 style='text align:centre;color:slateblue;padding-left: 0.6em;'>Your new photo have been uploaded.</h5>";
 }
 ?>
 
@@ -132,7 +132,8 @@ if($action=='login_success'){
     <div class="profile-img" id="profile-container">
     <img <?php echo 'src="data:image/jpeg;base64,' . base64_encode($res['pic']) . '"' ?>  name='image' id="profileImage"alt="Avatar" class="avatar" style="cursor: pointer;">
         <label for="file" class="file btn-dark">Change Photo</label>
-        <input type="file" id="imageUpload" class='avatar'id="profileImage" name='image' placeholder="Photo" accept="image/*" capture  style="display: none;"/></div>
+        <button type="submit" name="upload" id="button" class="btn btn-dark btn-sm">Upload</button>
+      <input type="file" id="imageUpload" class='avatar'id="profileImage" name='image' placeholder="Photo" accept="image/*" capture  style="display: none;"/></div>
 </div></div>
 <!-- Button trigger modal -->
 <div class="container" style="margin-left: 50px">
@@ -324,7 +325,7 @@ body {
 </body>
 </html>
 <?php
-}
+}//end while fectch data
 }
 $mysqli->close();
 ?>
