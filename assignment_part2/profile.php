@@ -32,7 +32,7 @@
   //delete account
   if(isset($_POST['delete'])){
   
-    $delete = mysqli_query($mysqli, "DELETE FROM users WHERE userid=$id");
+    $delete = mysqli_query($mysqli, "DELETE FROM users WHERE userid='$id'");
  
     header("Location:index.html");
   }
