@@ -1,0 +1,49 @@
+* {
+    box-sizing: border-box;
+    }
+    .container{
+      padding-left: 50px;
+      padding-top: 150px;
+    }
+    input[type=password] {
+    width: 70%;
+    padding: 10px;
+    margin: 15px 0 5px 0;
+    display: block ;
+    border: plum;
+    background: #e7e4eb;
+  }
+  /*background colour of the input box*/
+   input[type=password]:focus {
+    background-color: rgb(189, 154, 235);
+    outline: none;
+  }
+  hr {
+    border: 4px solid #541191;
+    margin-bottom: 15px;
+  }
+  .resetbutton {
+    background-color: #541191;
+    color: white;
+    padding: 10px 15px;
+    margin: 10px 0;
+    border: none;
+    cursor: pointer;
+    width: 45%;
+    opacity: 10;
+  }
+  button:hover {
+    opacity:0.5;
+  }
+  .container-fluid {
+    overflow: hidden;
+    margin-top: 250px;
+    background: #eacefe;
+    color: #541191 !important;
+    margin-bottom: 0;
+    padding-bottom: 0
+  }
+  .bold-text {
+    color: #541191 !important
+  }
+  
