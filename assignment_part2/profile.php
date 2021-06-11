@@ -19,13 +19,13 @@
     
 //upload photo
   if(isset($_POST['upload'])){
-    if(isset($_FILES['image']['tmp_name'])){
+    if(empty($_FILES['image']['tmp_name'])){
+      header("Location:profile.php?action=upload_fail");
+    }
+    else{
       $img=addslashes (file_get_contents($_FILES['image']['tmp_name']));
       $chgpic = mysqli_query($mysqli, "UPDATE users SET pic='$img' WHERE userid='$id'");
       header("Location:profile.php?action=upload_success");
-    }
-    else{
-      echo "<script>alert('Please select a image')</script>";
     }
   }
     
@@ -116,12 +116,16 @@
 <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="POST" enctype="multipart/form-data">
 
 <?php
-//if update success or upload photo success
+//if update success or upload photo success/fail
 $action = isset($_GET['action']) ? $_GET['action'] : "";
 if($action=='update_success'){
   echo "<h5 style='text align:centre;color:slateblue;padding-left: 0.6em;'>Your profile have been updated.</h5>";
-}elseif($action=='upload_success'){
+}
+elseif($action=='upload_success'){
   echo "<h5 style='text align:centre;color:slateblue;padding-left: 0.6em;'>Your new photo have been uploaded.</h5>";
+}
+elseif($action=='upload_fail'){
+  echo "<h5 style='text align:centre;color:slateblue;padding-left: 0.6em;'>Please select a photo.</h5>";
 }
 ?>
 
