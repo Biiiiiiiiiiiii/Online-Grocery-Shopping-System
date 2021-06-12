@@ -31,38 +31,38 @@ if (isset($_SESSION['logged_in']) && $_SESSION['user_id'] && $_SESSION['user_ema
 <body>
 <!-- content goes in the body - contains text and elements that display in the web page document -->
 <nav class="navbar navbar-expand-md navbar-dark fixed-top " style="background-color: #eacefe; ">
-    <a href="home_login.html "> <img src="logo.jpg " alt="logo " width="150 " height="40 "></a>
+    <a href="home_login.php"> <img src="logo.jpg " alt="logo " width="150 " height="40 "></a>
     <button class="navbar-toggler " type="button " data-toggle="collapse " data-target="#navbarCollapse " aria-controls="navbarCollapse " aria-expanded="false " aria-label="Toggle navigation ">
     <span class="navbar-toggler-icon "></span>
     </button>
         <div class="collapse navbar-collapse " id="navbarCollapse ">
             <ul class="navbar-nav mr-auto ">
             <li class="nav-item ">
-                <a class="nav-link " style="color: #541191; " href="home_login.html">Home</a></li>
+                <a class="nav-link " style="color: #541191; " href="home_login.php">Home</a></li>
             <li class="nav-item dropdown ">
                                 <div class="btn-group">
-                                    <a class="nav-link " style="color: #541191; " href="products.html">Category</a>
+                                    <a class="nav-link " style="color: #541191; " href="products.php">Category</a>
                                     <button type="button" class="btn dropdown-toggle dropdown-toggle-split" style="background-color: #eacefe; " data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                   <span class="sr-only">Toggle Dropdown</span>
                                 </button>
                                     <div class="dropdown-menu">
-                                        <a class="dropdown-item" href="drinks_page.html">Drinks</a>
-                                        <a class="dropdown-item" href="dryfood_page.html">Dry Food</a>
-                                        <a class="dropdown-item" href="fresh_page.html">Fresh Food</a>
-                                        <a class="dropdown-item" href="frozen_page.html">Frozen Food</a>
+                                        <a class="dropdown-item" href="drinks_page.php">Drinks</a>
+                                        <a class="dropdown-item" href="dryfood_page.php">Dry Food</a>
+                                        <a class="dropdown-item" href="fresh_page.php">Fresh Food</a>
+                                        <a class="dropdown-item" href="frozen_page.php">Frozen Food</a>
                                     </div>
                                 </div>
                             </li>
                         <li class="nav-item ">
-                            <a class="nav-link " style="color: #541191; " href="shoppinglist.html">My Shopping List</a>
+                            <a class="nav-link " style="color: #541191; " href="shoppinglist.php">My Shopping List</a>
                         </li>
                         <li class="nav-item ">
-                            <a class="nav-link " style="color: #541191; " href="history.html">History</a>
+                            <a class="nav-link " style="color: #541191; " href="history.php">History</a>
                         </li>
                     </ul>
                     <ul class="nav ">
-                        <li class="nav-item "><a href="index.html" class="nav-link px-2 " style="color: #541191; ">Logout</a></li>
-                        <li class="nav-item "><a href="userprofile.html" class="nav-link px-2 " style="color: #541191; ">
+                        <li class="nav-item "><a href="logout.php" class="nav-link px-2 " style="color: #541191; ">Logout</a></li>
+                        <li class="nav-item "><a href="profile.php" class="nav-link px-2 " style="color: #541191; ">
                             <img <?php echo 'src="data:image/jpeg;base64,' . base64_encode($res['pic']) . '"' ?> alt="Admin" class="rounded-circle" width="30"></a></li>
                     </ul>
     </div>
@@ -95,10 +95,10 @@ if(isset($_POST['current']) && isset($_POST['new']) && isset($_POST['confirm']))
     $curr = $_POST['current'];
     $new = $_POST['new'];
     $confirm =$_POST['confirm'];
-
+    $hashed = sha1($curr);
         $pw = $res['password'];
-
-        $samepw = checkPassword($pw, $curr);//check password from database & password from user input
+        $newhash=sha1($new);
+        $samepw = checkPassword($pw, $hashed);//check password from database & password from user input
     }
     
     $samepw2 = checkPassword($new, $confirm);
@@ -109,7 +109,7 @@ if(isset($_POST['current']) && isset($_POST['new']) && isset($_POST['confirm']))
     elseif(!$samepw2) {
         echo "<font color='red'>Passwords did not match! Try again.</font><br>";}
     }else{
-        $sql2 = "UPDATE users SET password='$new' WHERE userid='$id'";
+        $sql2 = "UPDATE users SET password='$newhash' WHERE userid='$id'";
         $result2= $mysqli->query($sql2);
         echo "<h5 style='text align:centre;color:slateblue'>Your new password have been saved.</h5>";
     }
@@ -161,7 +161,7 @@ mysqli_close($mysqli);
                 <div class="col-11">
                 <div class="row ">
                                         <div class="col-xl-8 col-md-4 col-sm-4 col-12 my-auto mx-auto a">
-                                            <a href="home_login.html "> <img src="logo.jpg" alt="logo " width="250 " height="70 "></a>
+                                            <a href="home_login.php "> <img src="logo.jpg" alt="logo " width="250 " height="70 "></a>
                                             <!-- <h3 class="text-muted mb-md-0 mb-5 bold-text">Shoppinglah</h3> -->
                                         </div>
                                         <div class="col-xl-2 col-md-4 col-sm-4 col-12">
