@@ -1,3 +1,10 @@
+<?php
+session_start();
+include("config.php");
+if (isset($_SESSION['setemail']) && $_SESSION['userid'] && $_SESSION['email'] && $_SESSION['setemail']==true ){
+    $id = $_SESSION['userid'];
+}
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -11,13 +18,11 @@
 </head>
 <body>
   <form action="cpass.php" method="post" style="border:1px solid rgb(145, 160, 226)">
-
   <nav class="navbar navbar-expand-md navbar-dark fixed-top " style="background-color: #eacefe; ">
     <a href="index.html"> <img src="logo.jpg " alt="logo " width="150 " height="40 "></a>
     <button class="navbar-toggler " type="button " data-toggle="collapse " data-target="#navbarCollapse " aria-controls="navbarCollapse " aria-expanded="false " aria-label="Toggle navigation "></button>
   </nav>
  
-
      <div class="container">
             <div class="ResetPassword">
                 <h2 style="font-family: 'Lucida Sans';">Reset your password?</h2>
@@ -93,9 +98,7 @@
          var a = document.getElementById("resetpassword");
          a.addEventListener("click",reset);
 </script>
-
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script>
 </body>
-
 </html>
