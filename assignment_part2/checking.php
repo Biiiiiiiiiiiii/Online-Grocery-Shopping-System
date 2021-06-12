@@ -1,10 +1,10 @@
 <?php
     session_start();
-    $db = mysqli_connect('localhost','root','','shoppinglah');
-    if ($db->connect_errno) {
-        printf("Connect failed: %s\n", $db->connect_error);
-        exit();
-    }
+    $host = 'localhost';
+    $dbname = 'shoppinglah';
+    $user = "admin"; 
+    $password = "shoppinglah"; 
+    $db = mysqli_connect($host,$user,$password,$dbname);
     
     /* check if server is alive */
     if ($db->ping()) {
@@ -17,16 +17,17 @@
     if(empty($email)){
         exit();
     }else{
-        $sql= "SELECT * FROM signup WHERE email='$email' ";
+        $sql= "SELECT * FROM users WHERE email='$email' ";
         $result = mysqli_query($db,$sql);
         $rowcount = mysqli_num_rows($result);
         $getresult = $result-> fetch_row();
         if($rowcount>=1){
-            if($getresult[3]===$email){
-              $_SESSION['ID'] = $getresult[0];
-              $_SESSION['username'] = $getresult[2];
-              $_SESSION['email'] = $getresult[3];
-              $_SESSION['level'] = $getresult[5];
+            if($getresult[2]===$email){
+              $_SESSION['setemail']=true;
+              $_SESSION['userid'] = $getresult[0];
+              $_SESSION['name'] = $getresult[1];
+              $_SESSION['email'] = $getresult[2];
+              //$_SESSION['level'] = $getresult[5];
                 echo '<script>alert("Email address is valid")</script>';
                 echo "<script>window.location='reset.php';</script>";
               }
