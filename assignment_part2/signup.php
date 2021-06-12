@@ -11,9 +11,8 @@
 </head>
 <body>
   <form action="server.php" method="post" style="border:1px solid rgb(145, 160, 226)">
-
   <nav class="navbar navbar-expand-md navbar-dark fixed-top " style="background-color: #eacefe; ">
-    <a href="index.php"> <img src="logo.jpg " alt="logo " width="150 " height="40 "></a>
+    <a href="index.html"> <img src="logo.jpg " alt="logo " width="150 " height="40 "></a>
     <button class="navbar-toggler " type="button " data-toggle="collapse " data-target="#navbarCollapse " aria-controls="navbarCollapse " aria-expanded="false " aria-label="Toggle navigation "></button>
   </nav>
  
@@ -50,7 +49,7 @@
             <div class="col-11">
                 <div class="row ">
                     <div class="col-xl-8 col-md-4 col-sm-4 col-12 my-auto mx-auto a">
-                        <a href="index.php"> <img src="logo.jpg" alt="logo " width="250 " height="70 "></a>
+                        <a href="index.html"> <img src="logo.jpg" alt="logo " width="250 " height="70 "></a>
                         <!-- <h3 class="text-muted mb-md-0 mb-5 bold-text">Shoppinglah</h3> -->
                     </div>
                     <div class="col-xl-2 col-md-4 col-sm-4 col-12">
@@ -75,14 +74,11 @@
                     <div class="col-xl-2 col-md-4 col-sm-4 col-auto order-1 align-self-end ">
                         <h6 class="mt-55 mt-2 text-muted bold-text"><b>Contact Us</b></h6><small> <span><i class="fa fa-envelope" aria-hidden="true"></i></span>shoppinglah@gmail.com</small>
                     </div>
-
                 </div>
             </div>
         </div>
-
     </footer>
 </div>
-
 <script type="text/javascript">       
       function validate() {
        if( document.getElementById('Username').value == "" ) {
@@ -131,5 +127,4 @@
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script>
 </body>
-
 </html>
