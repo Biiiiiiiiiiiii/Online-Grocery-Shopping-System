@@ -1,6 +1,20 @@
 <!DOCTYPE html>
-<html>
 
+<?php
+include_once("config.php");
+session_start();
+if (isset($_SESSION['logged_in']) && $_SESSION['user_id'] && $_SESSION['user_email'] && $_SESSION['logged_in']==true ){
+    $id = $_SESSION['user_id'];
+?>
+<html>
+<?php
+ //fetch data from db
+ $sql = "SELECT * FROM users WHERE userid='$id'";
+ $row = $mysqli->query($sql);
+
+ while($res=mysqli_fetch_array($row)){
+
+?>
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial scale=1, shrink-to-fit=no">
@@ -17,9 +31,7 @@
         }
     </style>
 </head>
-
 <body>
-
     <nav class="navbar navbar-expand-md navbar-dark fixed-top " style="background-color: #eacefe; ">
         <a href="home_admin.html"> <img src="logo.jpg " alt="logo " width="150 " height="40 "></a>
         <button class="navbar-toggler " type="button " data-toggle="collapse " data-target="#navbarCollapse " aria-controls="navbarCollapse " aria-expanded="false " aria-label="Toggle navigation ">
@@ -28,34 +40,31 @@
         <div class="collapse navbar-collapse " id="navbarCollapse ">
             <ul class="navbar-nav mr-auto ">
                 <li class="nav-item ">
-                    <a class="nav-link " style="color: #541191; " href="home_admin.html">Home</a>
+                    <a class="nav-link " style="color: #541191; " href="home_admin.php">Home</a>
                 </li>
                 <li class="nav-item dropdown ">
                     <div class="btn-group">
-                        <a class="nav-link " style="color: #541191; " href="admin_products.html">Category</a>
+                        <a class="nav-link " style="color: #541191; " href="admin_products.php">Category</a>
                         <button type="button" class="btn dropdown-toggle dropdown-toggle-split" style="background-color: #eacefe; " data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                   <span class="sr-only">Toggle Dropdown</span>
                                 </button>
                         <div class="dropdown-menu">
-                            <a class="dropdown-item" href="drinks_admin.html">Drinks</a>
-                            <a class="dropdown-item" href="dry_admin.html">Dry Food</a>
-                            <a class="dropdown-item" href="fresh_admin.html">Fresh Food</a>
-                            <a class="dropdown-item" href="frozen_admin.html">Frozen Food</a>
+                            <a class="dropdown-item" href="drinks_admin.php">Drinks</a>
+                            <a class="dropdown-item" href="dry_admin.php">Dry Food</a>
+                            <a class="dropdown-item" href="fresh_admin.php">Fresh Food</a>
+                            <a class="dropdown-item" href="frozen_admin.php">Frozen Food</a>
                         </div>
                     </div>
                 </li>
             </ul>
             <ul class="nav ">
-                <li class="nav-item "><a href="index.html" class="nav-link px-2 " style="color: #541191; ">Logout</a></li>
-                <li class="nav-item ">
-                    <a href="adminprofile.html" class="nav-link px-2 " style="color: #541191; ">
-                        <img src="https://bootdey.com/img/Content/avatar/avatar7.png" alt="User" class="rounded-circle" width="30"></a>
-                </li>
-            </ul>
-
+                <li class="nav-item "><a href="logout.php" class="nav-link px-2 " style="color: #541191; ">Logout</a></li>
+                <li class="nav-item "><a href="profile.php" class="nav-link px-2 " style="color: #541191; ">
+                        <img <?php echo 'src="data:image/jpeg;base64,' . base64_encode($res['pic']) . '"' ?>  alt="User" class="rounded-circle" width="30"></a></li>
+                    </ul>
         </div>
+        <?php } ?>
     </nav>
-
     <main class="container ">
         <div class="jumbotron">
             <h1>Shopping tips: Shop with Shoppinglah</h1>
@@ -90,7 +99,7 @@
                 <div class="card">
                     <img src="vegetables-and-fruits.jpg" class="card-img-top" alt="vegetables-and-fruits" width="250 " height="215 ">
                     <div class="card-body">
-                        <a class="card-title" style="color: #575555; " href="fresh_admin.html">Fresh Food</a>
+                        <a class="card-title" style="color: #575555; " href="fresh_admin.php">Fresh Food</a>
                         <!-- <p class="card-text ">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
                                     <p class="card-text "><small class="text-muted ">Last updated 3 mins ago</small></p> -->
                     </div>
@@ -98,7 +107,7 @@
                 <div class="card ">
                     <img src="frozenfood.jpg " class="card-img-top " alt="frozenfood " width="250 " height="215 ">
                     <div class="card-body ">
-                        <a class="card-title " style="color: #575555; " href="frozen_admin.html">Frozen Food</a>
+                        <a class="card-title " style="color: #575555; " href="frozen_admin.php">Frozen Food</a>
                         <!-- <p class="card-text ">This card has supporting text below as a natural lead-in to additional content.</p>
                                     <p class="card-text "><small class="text-muted ">Last updated 3 mins ago</small></p> -->
                     </div>
@@ -106,7 +115,7 @@
                 <div class="card ">
                     <img src="dryfood.jpg " class="card-img-top " alt="dryfood " width="250 " height="215 ">
                     <div class="card-body ">
-                        <a class="card-title " style="color: #575555; " href="dry_admin.html">Dry Food</a>
+                        <a class="card-title " style="color: #575555; " href="dry_admin.php">Dry Food</a>
                         <!-- <p class="card-text ">This is a wider card with supporting text below as a natural lead-in to additional content. This
                                         card has even longer content than the first to show that equal height action.</p>
                                         <p class="card-text "><small class="text-muted ">Last updated 3 mins ago</small></p> -->
@@ -114,9 +123,7 @@
                 </div>
             </div><br><br>
         </div>
-
     </main>
-
     <!-- Contains the web page document’s footer information  -->
     <div class="container-fluid pb-0 mb-0 justify-content-center text-light ">
         <footer>
@@ -124,7 +131,7 @@
                 <div class="col-11 ">
                     <div class="row ">
                         <div class="col-xl-8 col-md-4 col-sm-4 col-12 my-auto mx-auto a ">
-                            <a href="home_admin.html"> <img src="logo.jpg " alt="logo " width="250 " height="70 "></a>
+                            <a href="home_admin.php"> <img src="logo.jpg " alt="logo " width="250 " height="70 "></a>
                             <!-- <h3 class="text-muted mb-md-0 mb-5 bold-text ">Shoppinglah</h3> -->
                         </div>
                         <div class="col-xl-2 col-md-4 col-sm-4 col-12 ">
@@ -146,7 +153,6 @@
                         <div class="col-xl-2 col-md-4 col-sm-4 col-auto order-1 align-self-end ">
                             <h6 class="mt-55 mt-2 text-muted bold-text "><b>Contact Us</b></h6><small> <span><i class="fa fa-envelope " aria-hidden="true "></i></span>shoppinglah@gmail.com</small>
                         </div>
-
                     </div>
                 </div>
             </div>
@@ -155,5 +161,5 @@
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js " integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj " crossorigin="anonymous "></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js " integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns " crossorigin="anonymous "></script>
 </body>
-
 </html>
+<?php } ?>
