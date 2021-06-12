@@ -61,33 +61,33 @@
 <body>
 <!-- content goes in the body - contains text and elements that display in the web page document -->
 <nav class="navbar navbar-expand-md navbar-dark fixed-top " style="background-color: #eacefe; ">
-    <a href="home_login.html "> <img src="logo.jpg " alt="logo " width="150 " height="40 "></a>
+    <a href="home_login.php "> <img src="logo.jpg " alt="logo " width="150 " height="40 "></a>
     <button class="navbar-toggler " type="button " data-toggle="collapse " data-target="#navbarCollapse " aria-controls="navbarCollapse " aria-expanded="false " aria-label="Toggle navigation ">
     <span class="navbar-toggler-icon "></span>
     </button>
         <div class="collapse navbar-collapse " id="navbarCollapse ">
             <ul class="navbar-nav mr-auto ">
             <li class="nav-item ">
-                <a class="nav-link " style="color: #541191; " href="home_login.html">Home</a></li>
+                <a class="nav-link " style="color: #541191; " href="home_login.php">Home</a></li>
             <li class="nav-item dropdown ">
                                 <div class="btn-group">
-                                    <a class="nav-link " style="color: #541191; " href="products.html">Category</a>
+                                    <a class="nav-link " style="color: #541191; " href="products.php">Category</a>
                                     <button type="button" class="btn dropdown-toggle dropdown-toggle-split" style="background-color: #eacefe; " data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                   <span class="sr-only">Toggle Dropdown</span>
                                 </button>
                                     <div class="dropdown-menu">
-                                        <a class="dropdown-item" href="drinks_page.html">Drinks</a>
-                                        <a class="dropdown-item" href="dryfood_page.html">Dry Food</a>
-                                        <a class="dropdown-item" href="fresh_page.html">Fresh Food</a>
-                                        <a class="dropdown-item" href="frozen_page.html">Frozen Food</a>
+                                        <a class="dropdown-item" href="drinks_page.php">Drinks</a>
+                                        <a class="dropdown-item" href="dryfood_page.php">Dry Food</a>
+                                        <a class="dropdown-item" href="fresh_page.php">Fresh Food</a>
+                                        <a class="dropdown-item" href="frozen_page.php">Frozen Food</a>
                                     </div>
                                 </div>
                             </li>
                         <li class="nav-item ">
-                            <a class="nav-link " style="color: #541191; " href="shoppinglist.html">My Shopping List</a>
+                            <a class="nav-link " style="color: #541191; " href="shoppinglist.php">My Shopping List</a>
                         </li>
                         <li class="nav-item ">
-                            <a class="nav-link " style="color: #541191; " href="history.html">History</a>
+                            <a class="nav-link " style="color: #541191; " href="history.php">History</a>
                         </li>
                     </ul>
                     <ul class="nav ">
@@ -200,7 +200,7 @@ elseif($action=='upload_fail'){
           <div class="col-11">
               <div class="row ">
                   <div class="col-xl-8 col-md-4 col-sm-4 col-12 my-auto mx-auto a">
-                      <a href="home_login.html "> <img src="logo.jpg" alt="logo " width="250 " height="70 "></a>
+                      <a href="home_login.php "> <img src="logo.jpg" alt="logo " width="250 " height="70 "></a>
                       <!-- <h3 class="text-muted mb-md-0 mb-5 bold-text">Shoppinglah</h3> -->
                   </div>
                   <div class="col-xl-2 col-md-4 col-sm-4 col-12">
