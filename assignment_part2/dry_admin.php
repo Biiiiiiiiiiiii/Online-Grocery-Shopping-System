@@ -2,7 +2,10 @@
 <?php
 session_start();
 include("config.php");
+if (isset($_SESSION['logged_in']) && $_SESSION['user_id'] && $_SESSION['user_email'] && $_SESSION['logged_in']==true ){
+    $id = $_SESSION['user_id'];
 ?>
+
 <html>
 
 <head>
@@ -13,7 +16,14 @@ include("config.php");
     <link rel="stylesheet" href="style.css">
     <title>Dry food</title>
 </head>
+<?php
+ //fetch data from db
+ $getpp = "SELECT * FROM users WHERE userid='$id'";
+ $query = $mysqli->query($getpp);
 
+ while($pp=mysqli_fetch_array($query)){
+
+?>
 <body>
     <header>
 
@@ -31,14 +41,14 @@ include("config.php");
     </header>
 
     <nav class="navbar navbar-expand-md navbar-dark fixed-top " style="background-color: #eacefe; ">
-        <a href="home_admin.html"> <img src="logo.jpg " alt="logo " width="150 " height="40 "></a>
+        <a href="home_admin.php"> <img src="logo.jpg " alt="logo " width="150 " height="40 "></a>
         <button class="navbar-toggler " type="button " data-toggle="collapse " data-target="#navbarCollapse " aria-controls="navbarCollapse " aria-expanded="false " aria-label="Toggle navigation ">
             <span class="navbar-toggler-icon "></span>
         </button>
         <div class="collapse navbar-collapse " id="navbarCollapse ">
             <ul class="navbar-nav mr-auto ">
                 <li class="nav-item ">
-                    <a class="nav-link " style="color: #541191; " href="home_admin.html">Home</a>
+                    <a class="nav-link " style="color: #541191; " href="home_admin.php">Home</a>
                 </li>
                 <li class="nav-item dropdown ">
                     <div class="btn-group">
@@ -56,11 +66,11 @@ include("config.php");
                 </li>
             </ul>
             <ul class="nav ">
-                <li class="nav-item "><a href="index.html" class="nav-link px-2 " style="color: #541191; ">Logout</a></li>
-                <li class="nav-item "><a href="adminprofile.html" class="nav-link px-2 " style="color: #541191; ">
-                        <img src="https://bootdey.com/img/Content/avatar/avatar7.png" alt="User" class="rounded-circle" width="30"></a></li>
-            </ul>
-
+                <li class="nav-item "><a href="logout.php" class="nav-link px-2 " style="color: #541191; ">Logout</a></li>
+                <li class="nav-item "><a href="profile.php" class="nav-link px-2 " style="color: #541191; ">
+                        <img <?php echo 'src="data:image/jpeg;base64,' . base64_encode($pp['pic']) . '"' ?>  alt="User" class="rounded-circle" width="30"></a></li>
+                    </ul>
+            <?php } ?>
         </div>
     </nav>
     <div class="wrapper">
@@ -176,7 +186,7 @@ include("config.php");
                 <div class="col-11">
                     <div class="row ">
                         <div class="col-xl-8 col-md-4 col-sm-4 col-12 my-auto mx-auto a">
-                            <a href="home_admin.html"> <img src="logo.jpg" alt="logo " width="250 " height="70 "></a>
+                            <a href="home_admin.php"> <img src="logo.jpg" alt="logo " width="250 " height="70 "></a>
                             <!-- <h3 class="text-muted mb-md-0 mb-5 bold-text">Shoppinglah</h3> -->
                         </div>
                         <div class="col-xl-2 col-md-4 col-sm-4 col-12">
@@ -212,6 +222,7 @@ include("config.php");
 </body>
 
 </html>
+<?php } ?>
 <?php
 mysqli_close($mysqli);
 ?>
