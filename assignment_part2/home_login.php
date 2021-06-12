@@ -72,8 +72,8 @@ if (isset($_SESSION['logged_in']) && $_SESSION['user_id'] && $_SESSION['user_ema
         <?php } ?>
     </nav>
     <main class="container ">
+        <h3>Welcome, <strong><?php echo $username ?></h3></strong>
         <div class="jumbotron">
-            <h3>Welcome, <strong><?php echo $username ?></h3></strong>
             <h1>Shopping tips: Shop with Shoppinglah</h1>
             <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
                 <ol class="carousel-indicators">
