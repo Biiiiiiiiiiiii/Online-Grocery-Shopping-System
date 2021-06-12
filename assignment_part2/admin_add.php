@@ -1,4 +1,10 @@
 <!DOCTYPE html>
+<?php
+include_once("config.php");
+session_start();
+if (isset($_SESSION['logged_in']) && $_SESSION['user_id'] && $_SESSION['user_email'] && $_SESSION['logged_in']==true ){
+    $id = $_SESSION['user_id'];
+?>
 <html>
 
 <head>
@@ -10,39 +16,48 @@
     <link rel="stylesheet" href="style.css">
     <title>Add new product</title>
 </head>
+<?php
+ //fetch data from db
+ $sql = "SELECT * FROM users WHERE userid='$id'";
+ $row = $mysqli->query($sql);
+
+ while($res=mysqli_fetch_array($row)){
+
+?>
 <body>
     <!-- content goes in the body - contains text and elements that display in the web page document -->
     <nav class="navbar navbar-expand-md navbar-dark fixed-top " style="background-color: #eacefe; ">
-        <a href="home_admin.html"> <img src="logo.jpg " alt="logo " width="150 " height="40 "></a>
+        <a href="home_admin.php"> <img src="logo.jpg " alt="logo " width="150 " height="40 "></a>
         <button class="navbar-toggler " type="button " data-toggle="collapse " data-target="#navbarCollapse " aria-controls="navbarCollapse " aria-expanded="false " aria-label="Toggle navigation ">
             <span class="navbar-toggler-icon "></span>
         </button>
         <div class="collapse navbar-collapse " id="navbarCollapse ">
             <ul class="navbar-nav mr-auto ">
                 <li class="nav-item ">
-                    <a class="nav-link " style="color: #541191; " href="home_admin.html">Home</a>
+                    <a class="nav-link " style="color: #541191; " href="home_admin.php">Home</a>
                 </li>
                 <li class="nav-item dropdown ">
                     <div class="btn-group">
-                        <a class="nav-link " style="color: #541191; " href="admin_products.html">Category</a>
+                        <a class="nav-link " style="color: #541191; " href="admin_products.php">Category</a>
                         <button type="button" class="btn dropdown-toggle dropdown-toggle-split" style="background-color: #eacefe; " data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             <span class="sr-only">Toggle Dropdown</span>
                         </button>
                         <div class="dropdown-menu">
-                            <a class="dropdown-item" href="drinks_admin.html">Drinks</a>
-                            <a class="dropdown-item" href="dry_admin.html">Dry Food</a>
-                            <a class="dropdown-item" href="fresh_admin.html">Fresh Food</a>
-                            <a class="dropdown-item" href="frozen_admin.html">Frozen Food</a>
+                            <a class="dropdown-item" href="drinks_admin.php">Drinks</a>
+                            <a class="dropdown-item" href="dry_admin.php">Dry Food</a>
+                            <a class="dropdown-item" href="fresh_admin.php">Fresh Food</a>
+                            <a class="dropdown-item" href="frozen_admin.php">Frozen Food</a>
                         </div>
                     </div>
                 </li>
             </ul>
             <ul class="nav ">
-                <li class="nav-item "><a href="index.html" class="nav-link px-2 " style="color: #541191; ">Logout</a></li>
-                <li class="nav-item "><a href="adminprofile.html" class="nav-link px-2 " style="color: #541191; ">
-                        <img src="https://bootdey.com/img/Content/avatar/avatar7.png" alt="Admin" class="rounded-circle" width="30"></a></li>
-            </ul>
+                <li class="nav-item "><a href="logout.php" class="nav-link px-2 " style="color: #541191; ">Logout</a></li>
+                <li class="nav-item "><a href="profile.php" class="nav-link px-2 " style="color: #541191; ">
+                        <img <?php echo 'src="data:image/jpeg;base64,' . base64_encode($res['pic']) . '"' ?>  alt="User" class="rounded-circle" width="30"></a></li>
+                    </ul>
         </div>
+        <?php } ?>
     </nav>
     <main>
         <!-- Contains the web page document’s main content  -->
@@ -144,7 +159,7 @@
                 <div class="col-11">
                     <div class="row ">
                         <div class="col-xl-8 col-md-4 col-sm-4 col-12 my-auto mx-auto a">
-                            <a href="home_admin.html"> <img src="logo.jpg" alt="logo " width="250 " height="70 "></a>
+                            <a href="home_admin.php"> <img src="logo.jpg" alt="logo " width="250 " height="70 "></a>
                             <!-- <h3 class="text-muted mb-md-0 mb-5 bold-text">Shoppinglah</h3> -->
                         </div>
                         <div class="col-xl-2 col-md-4 col-sm-4 col-12">
@@ -193,3 +208,4 @@
     </script>
 </body>
 </html>
+<?php } ?>
