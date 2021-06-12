@@ -59,17 +59,17 @@ include("config.php");
                     </div>
                 </li>
                 <li class="nav-item ">
-                    <a class="nav-link " style="color: #541191; " onclick="popUp()" href="login.html">My Shopping
+                    <a class="nav-link " style="color: #541191; " onclick="popUp()" href="login.php">My Shopping
                         List</a>
                 </li>
                 <li class="nav-item ">
-                    <a class="nav-link " style="color: #541191; " onclick="popUp()" href="login.html">History</a>
+                    <a class="nav-link " style="color: #541191; " onclick="popUp()" href="login.php">History</a>
                 </li>
             </ul>
             <ul class="nav ">
-                <li class="nav-item "><a href="login.html" class="nav-link px-2 " style="color: #541191; ">Login</a>
+                <li class="nav-item "><a href="login.php" class="nav-link px-2 " style="color: #541191; ">Login</a>
                 </li>
-                <li class="nav-item "><a href="signup.html" class="nav-link px-2 " style="color: #541191; ">Sign up</a>
+                <li class="nav-item "><a href="signup.php" class="nav-link px-2 " style="color: #541191; ">Sign up</a>
                 </li>
             </ul>
 
@@ -155,7 +155,7 @@ include("config.php");
                                         width="16" height="16" onclick="plus(this)">+</button>
 
                                     <a class="btn btn-primary" style="margin-left: 10px;" onclick="popUp()"
-                                        href="login.html">
+                                        href="login.php">
                                         <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
                                             fill="currentColor" class="bi bi-bag-plus-fill" viewBox="0 0 16 16">
                                             <path fill-rule="evenodd"
