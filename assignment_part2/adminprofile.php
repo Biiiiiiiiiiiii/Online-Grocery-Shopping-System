@@ -28,14 +28,6 @@
       header("Location:profile.php?action=upload_success");
     }
   }
-    
-  //delete account
-  if(isset($_POST['delete'])){
-  
-    $delete = mysqli_query($mysqli, "DELETE FROM users WHERE userid='$id'");
- 
-    header("Location:index.html");
-  }
  
 ?>
 
@@ -134,29 +126,9 @@ elseif($action=='upload_fail'){
       <input type="file" id="imageUpload" class='avatar'id="profileImage" name='image' placeholder="Photo" accept="image/*" capture  style="display: none;"/></div>
 </div></div>
 <!-- Button trigger modal -->
-<div class="container" style="margin-left: 50px">
- <button type="button" class="btn btn-primary" style="background-color: #541191;" data-toggle="modal" data-target="#staticBackdrop">Delete account</button>
-</div>
+
    <!-- Modal -->
-   <div class="modal fade" id="staticBackdrop" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-     <div class="modal-dialog modal-dialog-centered">
-       <div class="modal-content">
-         <div class="modal-header">
-           <h5 class="modal-title" id="staticBackdropLabel">Delete Account</h5>
-           <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-             <span aria-hidden="true">&times;</span>
-           </button>
-         </div>
-         <div class="modal-body">
-           Are you sure you want to delete account?
-         </div>
-         <div class="modal-footer">
-           <button type="button" class="btn btn-secondary" data-dismiss="modal">No</button>
-           <button type="submit" name="delete" class="btn btn-primary deletebtn" onclick="deletebtn()">Yes</button>
-         </div>
-       </div>
-     </div>
-   </div>
+   
 </div>
 
 <div class="col-md-7">
