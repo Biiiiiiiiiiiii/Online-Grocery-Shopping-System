@@ -74,7 +74,7 @@ if (isset($_SESSION['logged_in']) && $_SESSION['user_id'] && $_SESSION['user_ema
       <a class="nav-link active" href="adminpassword.php">Password</a>
     </li>
 </ul>
-
+<div class="row justify-content-center">
 <div class="col-md-7">
     <div><h4 class="text-center">Change Password</h4></div>
     <div class="card mb-3">
@@ -117,11 +117,11 @@ mysqli_close($mysqli);
 
 ?>
 
-    <div class="row">
+    <div class="row ">
     <div class="col-sm-3"><h6 class="mb-0">Current Password:</h6></div>
     <div class="col-sm-9 text-secondary">
     <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post">
-    <div class="form-row">
+    <div class="form-row justify-content-center">
     <div class="form-group col-md-8">
     <input class="form-control" name='current' id="current" placeholder="Current Password" type="password" required>
     </div></div></div></div>
@@ -129,15 +129,15 @@ mysqli_close($mysqli);
     <div class="row">
     <div class="col-sm-3"><h6 class="mb-0">New Password:</h6></div>
     <div class="col-sm-9 text-secondary">
-    <div class="form-row">
+    <div class="form-row justify-content-center">
     <div class="form-group col-md-8">
     <input class="form-control" name='new'id="new" placeholder="New Password" type="password" required>
     </div></div></div></div>
 
     <div class="row">
-    <div class="col-sm-3"><h6 class="mb-0">Confirm Password:</h6></div>
+    <div class="col-sm-3 "><h6 class="mb-0">Confirm Password:</h6></div>
     <div class="col-sm-9 text-secondary">
-    <div class="form-row">
+    <div class="form-row justify-content-center">
     <div class="form-group col-md-8">
     <input class="form-control" name='confirm' id="confirm" placeholder="Confirm Password" type="password" required>
     </div></div></div></div>
@@ -146,7 +146,7 @@ mysqli_close($mysqli);
     </div>
 
     </form></div></div>
-</div></div>
+</div></div></div>
 
 </main>
 
