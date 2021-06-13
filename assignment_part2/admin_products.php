@@ -67,7 +67,7 @@ if (isset($_SESSION['logged_in']) && $_SESSION['user_id'] && $_SESSION['user_ema
             </ul>
             <ul class="nav ">
                 <li class="nav-item "><a href="logout.php" class="nav-link px-2 " style="color: #541191; ">Logout</a></li>
-                <li class="nav-item "><a href="profile.php" class="nav-link px-2 " style="color: #541191; ">
+                <li class="nav-item "><a href="adminprofile.php" class="nav-link px-2 " style="color: #541191; ">
                         <img <?php echo 'src="data:image/jpeg;base64,' . base64_encode($pp['pic']) . '"' ?>  alt="User" class="rounded-circle" width="30"></a></li>
                     </ul>
         <?php } ?>
