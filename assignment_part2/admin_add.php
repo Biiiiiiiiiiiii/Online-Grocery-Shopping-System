@@ -65,7 +65,7 @@ if (isset($_SESSION['logged_in']) && $_SESSION['user_id'] && $_SESSION['user_ema
             <div>
                 <h4 class="text-center">Add New Product</h4>
             </div>
-            <div class="row">
+            <div class="row justify-content-center">
                 <div class="col-md-7">
                     <div class="card mb-3">
                         <div class="card-body">
