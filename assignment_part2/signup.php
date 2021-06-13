@@ -37,7 +37,7 @@
        <div class="submit">
        
         <button name="register" type="submit" id="sign" class="signupbutton">Sign Up</button>
-        <button type="button" class="cancelbutton" onclick="document.location='index.php'">Cancel</button></div>
+        <button type="button" class="cancelbutton" onclick="document.location='index.html'">Cancel</button></div>
         <hr>
         <p>Already have an existing account? <a href="login.php" style="color:rgb(223, 35, 182);font-family: sans-serif;">Log In</a> now !</p>
        </div>
