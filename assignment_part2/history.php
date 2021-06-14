@@ -76,7 +76,9 @@ if (isset($_SESSION['logged_in']) && $_SESSION['user_id'] && $_SESSION['user_ema
                     ?>
 
                         <form action="historymodal.php" method="POST">
-                            <input type="button" data-name="<?php echo $res['ListName'] ?>" data-id="<?php echo $res['ListID'] ?>" name="listNamee" class="listbutton btn btn-secondary btn-lg btn-block font-weight-bold pt-1 bg-primary text-white" data-bs-toggle="modal" data-bs-target="#modal-<?php echo $res['ListName'] ?>" value="<?php echo $res['ListName'] ?>">
+                        <div class="d-grid gap-2 col-6 mx-auto">
+                            <input type="button" data-name="<?php echo $res['ListName'] ?>" data-id="<?php echo $res['ListID'] ?>" name="listNamee" class="listbutton btn btn-lg btn-block font-weight-bold bg-primary text-white" data-bs-toggle="modal" data-bs-target="#modal-<?php echo $res['ListName'] ?>" value="<?php echo $res['ListName'] ?>">
+                        </div></br>
                         </form>
                         <div class="modal fade" id="modal-<?php echo $res['ListName'] ?>" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
                                 <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered">
