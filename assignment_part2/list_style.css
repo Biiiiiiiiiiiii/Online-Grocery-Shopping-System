@@ -74,3 +74,13 @@ body {
     background-color: #df23b6;
     color: #fff;
   }
+.btn-outline-primary {
+    color:#541191;
+    border-color: #541191;
+  }
+  
+  .btn-outline-primary:hover {
+    color: #fff;
+    background-color:#541191;
+    border-color: #541191;
+  }
