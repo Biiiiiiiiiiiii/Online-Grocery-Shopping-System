@@ -74,16 +74,17 @@ if (isset($_SESSION['logged_in']) && $_SESSION['user_id'] && $_SESSION['user_ema
                 <main>
                     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js" integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous"></script>
 
-                    <!--........................House...........................-->
+                    <!--........................List...........................-->
                     <?php
                     $list = mysqli_query($mysqli, "SELECT * FROM shoppinglist WHERE Status='Active' AND userid='$id'");
                     while ($res = mysqli_fetch_array($list)) :
                     ?>
 
-                        <form action="addmodal.php" method="POST">
-                            <input type="button" data-name="<?php echo $res['ListName'] ?>" data-id="<?php echo $res['ListID'] ?>" name="listNamee" class="listbutton btn btn-secondary btn-lg btn-block font-weight-bold pt-1 bg-primary text-white" data-bs-toggle="modal" data-bs-target="#modal-<?php echo $res['ListName'] ?>" value="<?php echo $res['ListName'] ?>">
+                        <form action="addmodal.php" method="POST">       
+                        <div class="d-grid gap-2 col-6 mx-auto">                     
+                            <input type="button" data-name="<?php echo $res['ListName'] ?>" data-id="<?php echo $res['ListID'] ?>" name="listNamee" class="listbutton btn btn-lg btn-block font-weight-bold bg-primary text-white" data-bs-toggle="modal" data-bs-target="#modal-<?php echo $res['ListName'] ?>" value="<?php echo $res['ListName'] ?>">
+                        </div><br>
                         </form>
-
 
                         <form action="editList.php" method="POST">
                             <input type="hidden" class="conList" name="delListYes">
@@ -101,7 +102,7 @@ if (isset($_SESSION['logged_in']) && $_SESSION['user_id'] && $_SESSION['user_ema
                     <?php
                     endwhile
                     ?>
-                    <br><button onclick="pop()" class="btn btn-primary btn-lg btn-block ">Add New List</button>
+                    <br><button onclick="pop()" class="btn mx-auto btn-primary btn-lg d-md-block ">Add New List</button>
 
                     <script>
                         function pop() {
