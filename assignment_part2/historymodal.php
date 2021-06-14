@@ -52,8 +52,9 @@ $total=0;
         </div>
     <?php
     }
-    echo "Total: RM".number_format($total,2);
+    
     ?>
+    <h3><?php echo "Total: RM".number_format($total,2);?></h3>
     <input type="hidden" class="listidd" name="listiddd" value="<?php echo $lid1?>">
     <input type="hidden" class="conList" name="listyes">
     <br><input type="hidden" name="deleteList" class="btn btn-danger btn-block" onclick="yesFunction()" id='listName' value="Delete List">
