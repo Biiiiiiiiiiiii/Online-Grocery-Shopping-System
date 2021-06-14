@@ -33,7 +33,7 @@ if (isset($_SESSION['logged_in']) && $_SESSION['user_id'] && $_SESSION['user_ema
 
             <div class="container">
                 <nav class="navbar navbar-expand-md navbar-dark fixed-top " style="background-color: #eacefe; ">
-                    <a href="home_login.html"> <img src="logo.jpg " alt="logo " width="150 " height="40 "></a>
+                    <a href="home_login.php"> <img src="logo.jpg " alt="logo " width="150 " height="40 "></a>
                     <button class="navbar-toggler " type="button " data-toggle="collapse " data-target="#navbarCollapse " aria-controls="navbarCollapse " aria-expanded="false " aria-label="Toggle navigation ">
                         <span class="navbar-toggler-icon "></span>
                     </button>
