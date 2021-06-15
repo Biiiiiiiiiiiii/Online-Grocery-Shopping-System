@@ -14,18 +14,18 @@
         $chgtxt = mysqli_query($mysqli, "UPDATE users SET name='$name', email='$email' WHERE userid='$id'");
       }
 
-      header("Location:profile.php?action=update_success");
+      header("Location:adminprofile.php?action=update_success");
     }
     
 //upload photo
   if(isset($_POST['upload'])){
     if(empty($_FILES['image']['tmp_name'])){
-      header("Location:profile.php?action=upload_fail");
+      header("Location:adminprofile.php?action=upload_fail");
     }
     else{
       $img=addslashes (file_get_contents($_FILES['image']['tmp_name']));
       $chgpic = mysqli_query($mysqli, "UPDATE users SET pic='$img' WHERE userid='$id'");
-      header("Location:profile.php?action=upload_success");
+      header("Location:adminprofile.php?action=upload_success");
     }
   }
  
