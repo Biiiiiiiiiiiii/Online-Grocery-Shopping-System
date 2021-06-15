@@ -30,10 +30,10 @@
       <hr>
             
       <label for="LoginUser"><b>Email Address</b></label>
-      <input type="text" name = "email" placeholder="Enter your email address" id="LoginUser" value ="<?php if (isset($_COOKIE["email"])) {echo $_COOKIE["email"];} ?> " required/><br>
+      <input type="text" name = "email" placeholder="Enter your email address" id="LoginUser" value ="<?php if (isset($_COOKIE["email"])) {echo $_COOKIE["email"];} ?>" required/><br>
       
       <label for="password"><b>Password</b></label>
-      <input type="password" name = "password" placeholder="Enter your Password" id="password" value ="<?php if (isset($_COOKIE["password"])) {echo $_COOKIE["password"];} ?> "required/><a href="forgetpassword.php" style="color:rgb(194, 77, 230);font-family: sans-serif">Forget password?</a><br>
+      <input type="password" name = "password" placeholder="Enter your Password" id="password" value ="<?php if (isset($_COOKIE["password"])) {echo $_COOKIE["password"];} ?>" required/><a href="forgetpassword.php" style="color:rgb(194, 77, 230);font-family: sans-serif">Forget password?</a><br>
       
     <br>
         <input type="checkbox" checked="checked" name="remember" style="margin-bottom:15px"> Remember me<br>
