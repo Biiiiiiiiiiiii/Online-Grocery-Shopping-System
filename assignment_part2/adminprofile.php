@@ -79,7 +79,7 @@
                     <ul class="nav ">
                         <li class="nav-item "><a href="logout.php" class="nav-link px-2 " style="color: #541191; ">Logout</a></li>
                         <li class="nav-item "><a href="adminprofile.php" class="nav-link px-2 " style="color: #541191; ">
-                        <img <?php echo 'src="data:image/jpeg;base64,' . base64_encode($res['pic']) . '"' ?>  alt="User" class="rounded-circle" width="30"></a></li>
+                        <img <?php echo 'src="data:image/jpeg;base64,' . base64_encode($res['pic']) . '"' ?>  alt="User" class="rounded-circle" width="30" height="30" style="object-fit: contain; background-image: url('bg.png');"></a></li>
                     </ul>
     </div>
 </nav>
@@ -225,8 +225,10 @@ function deletebtn(){
     text-align: center;
 }
 .profile-img img{
-    width: 70%;
-    height: 100%;
+    width: 150px;
+    height: 150px;
+    object-fit: contain;
+    background-image: url('bg.png');
 }
 .profile-img .file {
     position: relative;
