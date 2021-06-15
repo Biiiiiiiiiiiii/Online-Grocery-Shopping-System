@@ -5,7 +5,7 @@ include_once("config.php");
 session_start();
 if (isset($_SESSION['logged_in']) && $_SESSION['user_id'] && $_SESSION['user_email'] && $_SESSION['logged_in']==true ){
     $id = $_SESSION['user_id'];
-    $username = $_SESSION['user_name'];
+    
 ?>
 <head>
     <meta charset="utf-8">
@@ -27,9 +27,9 @@ if (isset($_SESSION['logged_in']) && $_SESSION['user_id'] && $_SESSION['user_ema
  //fetch data from db
  $sql = "SELECT * FROM users WHERE userid='$id'";
  $row = $mysqli->query($sql);
-
+ 
  while($res=mysqli_fetch_array($row)){
-
+    $username = $res['name'];
 ?>
 <body>
     <nav class="navbar navbar-expand-md navbar-dark fixed-top " style="background-color: #eacefe; ">
