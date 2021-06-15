@@ -47,7 +47,7 @@ if (isset($_SESSION['logged_in']) && $_SESSION['user_id'] && $_SESSION['user_ema
                                 </button>
                                     <div class="dropdown-menu">
                                         <a class="dropdown-item" href="drinks_admin.php">Drinks</a>
-                                        <a class="dropdown-item" href="dryfood_admin.php">Dry Food</a>
+                                        <a class="dropdown-item" href="dry_admin.php">Dry Food</a>
                                         <a class="dropdown-item" href="fresh_admin.php">Fresh Food</a>
                                         <a class="dropdown-item" href="frozen_admin.php">Frozen Food</a>
                                     </div>
@@ -58,7 +58,7 @@ if (isset($_SESSION['logged_in']) && $_SESSION['user_id'] && $_SESSION['user_ema
                     <ul class="nav ">
                         <li class="nav-item "><a href="logout.php" class="nav-link px-2 " style="color: #541191; ">Logout</a></li>
                         <li class="nav-item "><a href="adminprofile.php" class="nav-link px-2 " style="color: #541191; ">
-                            <img <?php echo 'src="data:image/jpeg;base64,' . base64_encode($pp['pic']) . '"' ?>  alt="User" class="rounded-circle" width="30" height="30" style="object-fit: contain; background-image: url('bg.png');"></a></li>
+                            <img <?php echo 'src="data:image/jpeg;base64,' . base64_encode($res['pic']) . '"' ?>  alt="User" class="rounded-circle" width="30" height="30" style="object-fit: contain; background-image: url('bg.png');"></a></li>
                     </ul>
     </div>
 </nav>
