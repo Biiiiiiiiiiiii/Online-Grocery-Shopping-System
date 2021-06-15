@@ -22,7 +22,7 @@
     <?php
         $action=isset($_GET['action']) ? $_GET['action'] : NULL;
         if($action=="login_failed"){
-            echo "<h5 style='text align:centre;color:slateblue'> Email or Password is invalid. </h5>";
+            echo "<h5 style='text align:centre;color:red'> Email or Password is invalid. </h5>";
         }
         ?>
       <h1 style="font-family: cursive;">Login</h1>
