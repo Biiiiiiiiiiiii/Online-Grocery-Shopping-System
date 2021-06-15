@@ -69,7 +69,7 @@
                                 </button>
                                     <div class="dropdown-menu">
                                         <a class="dropdown-item" href="drinks_admin.php">Drinks</a>
-                                        <a class="dropdown-item" href="dryfood_admin.php">Dry Food</a>
+                                        <a class="dropdown-item" href="dry_admin.php">Dry Food</a>
                                         <a class="dropdown-item" href="fresh_admin.php">Fresh Food</a>
                                         <a class="dropdown-item" href="frozen_admin.php">Frozen Food</a>
                                     </div>
