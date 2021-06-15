@@ -13,54 +13,6 @@ if(isset($_POST['newList'])){
     }
 }
 
-//delete list
-// $conDelList = $_POST['delListYes'];
-// $listID = $_POST['ID'];
-// $listName = $_POST['name'];
-// if(isset($_POST['deleteList'])&&$conDelList=="Yes")
-// {
-//     $status = mysqli_query($mysqli,"UPDATE shoppinglist SET Status='Deleted' WHERE ListID=$listID");
-//     //$delete = mysqli_query($mysqli,"DELETE FROM shoppinglist WHERE ListName='$listName'");
-//     if($status){
-//         mysqli_close($mysqli);
-//         header("location:shoppinglist.php");
-//     }
-//     else{
-//         mysqli_error($mysqli);
-//     }
-// }
-// else{
-//     mysqli_close($mysqli);
-//         header("location:shoppinglist.php");
-// }
-/*if(isset($_POST['deleteList'])){  
-    $deleteList = mysqli_query($mysqli,"DELETE FROM shoppinglist WHERE ListName= $listName;");  
-    if($deleteList){
-        mysqli_close($mysqli);
-        header("location:shoppinglist.php");
-    }
-    exit();
-}*/
-
-//delete product
-// $prodID=$_POST['prodID'];
-// $listID=$_POST['ID'];
-// if(isset($_POST['deleteProduct'])&&$conDelProd=="Yes"){
-    
-//     $delete = mysqli_query($mysqli,"DELETE FROM listcontent WHERE ListID='$listID' AND ProductID='$prodID'");
-//     if($delete){
-//         mysqli_close($mysqli);
-//         header("location:shoppinglist.php");
-//     }
-//     else{
-//         mysqli_error($mysqli);
-//     }
-// }
-// else{
-//     mysqli_close($mysqli);
-//         header("location:shoppinglist.php");
-// }
-
 }
 $confirm = $_POST['yes'];
 $proid = $_POST['proidd'];
@@ -84,6 +36,10 @@ if($confirm=="Yes")
         echo mysqli_error($mysqli);
     }    	
 }
+else{ //if cancel delete
+    header("location:shoppinglist.php");
+}
+
 $proid = $_POST['proidd'];
 $liid = $_POST['listidd'];
 $upconf=$_POST['update'];
@@ -123,5 +79,8 @@ if($listconfirm=="Yes")
     {
         echo mysqli_error($mysqli);
     }    	
+}
+else{ //if cancel delete
+    header("location:shoppinglist.php");
 }
 ?>
