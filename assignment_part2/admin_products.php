@@ -5,7 +5,7 @@ include("config.php");
 if (isset($_SESSION['logged_in']) && $_SESSION['user_id'] && $_SESSION['user_email'] && $_SESSION['logged_in']==true ){
     $id = $_SESSION['user_id'];
 ?>
-?>
+
 <html>
 
 <head>
