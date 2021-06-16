@@ -53,6 +53,7 @@ if(isset($_POST['save'])) // when click on Save button
 if($confirm=="Yes")
 {
 	// delete product from database
+	$removeFromList = mysqli_query($mysqli,"DELETE FROM listcontent WHERE ProductID='$id'");
     $delete = mysqli_query($mysqli,"DELETE FROM product WHERE ProductID='$id'");
 	
     if($delete)
