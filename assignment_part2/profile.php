@@ -31,7 +31,12 @@
     
   //delete account
   if(isset($_POST['delete'])){
-  
+    $getLists = mysqli_query($mysqli,"SELECT * FROM shoppinglist WHERE userid='$id'");
+    while($result = mysqli_fetch_array($getLists)){
+      $LID = $result["ListID"];
+      $delProd = mysqli_query($mysqli,"DELETE FROM listcontent WHERE ListID='$LID'");
+    }
+    $delList = mysqli_query($mysqli,"DELETE FROM shoppinglist WHERE userid='$id'");
     $delete = mysqli_query($mysqli, "DELETE FROM users WHERE userid='$id'");
  
     header("Location:index.html");
